@@ -70,7 +70,7 @@ The interactive device can be anything *except* a computer, a tablet computer or
 **In this story, a "dog" wants something and is trying to communicate it to the owner. The owner takes several guesses before determining that the "dog" wants an ice cube.**
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
-!(Lab 1/Image from iOS.jpg)
+![storyboard](Lab 1/Image from iOS.jpg)
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
