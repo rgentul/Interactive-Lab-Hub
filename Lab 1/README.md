@@ -73,7 +73,7 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 ![storyboard](https://github.com/rgentul/Interactive-Lab-Hub/blob/Spring2021/Lab%201/Image%20from%20iOS.jpg)
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
-**Summarize feedback you got here.**
+**I was told to add a little complexity, like adding sound and color to the feedback mechanism.**
 
 
 ## Part B. Act out the Interaction
@@ -81,9 +81,10 @@ Present your idea to the other people in your breakout room. You can just get fe
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 **Are there things that seemed better on paper than acted out?**
+Getting the dog to sit still proves far more difficult in person than on paper, and he also wants attention above all else, which could skew the results.
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
-
+Yes, I could also use the device to have the dog "point out" items that he wants.
 
 ## Part C. Prototype the device
 
@@ -93,13 +94,15 @@ Code for the "Tinkerbelle" tool, and instructions for setting up the server and 
 
 We invented this tool for this lab! 
 **Give us feedback on Tinkerbelle.**
+Tinkerbelle works fairly well, although my phone did not enter fullscreen. I'd also request some more detailed setup instructions for the less CS-minded students.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+
+Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 **Show the follow-up work here.**
 
