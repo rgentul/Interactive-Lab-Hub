@@ -70,7 +70,7 @@ The interactive device can be anything *except* a computer, a tablet computer or
 **In this story, a "dog" wants something and is trying to communicate it to the owner. The owner takes several guesses before determining that the "dog" wants an ice cube.**
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
-![storyboard](https://github.com/rgentul/Interactive-Lab-Hub/blob/Spring2021/Lab%201/Image%20from%20iOS.jpg)
+![storyboard](https://github.com/rgentul/Interactive-Lab-Hub/blob/Spring2021/Lab%201/storyboard.jpg)
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **I was told to add a little complexity, like adding sound and color to the feedback mechanism.**
@@ -105,6 +105,7 @@ https://imgur.com/a/TxL1sXV
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 **Show the follow-up work here.**
+![storyboard](https://github.com/rgentul/Interactive-Lab-Hub/blob/Spring2021/Lab%201/storyboard2.jpg)
 
 ## Part E. Costume the device
 
@@ -113,8 +114,10 @@ Only now should you start worrying about what the device should look like. Devel
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 **Include sketches of what your device might look like here.**
+![storyboard](https://github.com/rgentul/Interactive-Lab-Hub/blob/Spring2021/Lab%201/mockup.jpg)
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
+This adjustment places the device in a housing that can hang conveniently from the dog's collar, 
 
 
 ## Part F. Record
@@ -123,6 +126,7 @@ Think about the setting of the device: is the environment a place where the devi
 https://imgur.com/a/CwR5Ya7
 
 **Please indicate anyone you collaborated with on this Lab.**
+Ross Kleinrock, Min Tae Lee, William Zhang
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 # Staging Interaction, Part 2 
