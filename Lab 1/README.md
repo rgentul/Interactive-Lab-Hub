@@ -149,3 +149,12 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 **Document everything here.**
+
+For Part 2, I chose to expand on my initial idea a bit and incorporate sound, vibration, and iconography into the device. I wanted it to also serve a slightly more useful purpose; in this case, identifying what a dog's bark is trying to communicate. I sketched out my idea in a storyboard, and then recorded the paper prototype.
+
+**Paper Prototype**
+![storyboard](https://github.com/rgentul/Interactive-Lab-Hub/blob/Spring2021/Lab%201/Image%20from%20iOS%20(3).jpg)
+
+**Video**
+https://imgur.com/a/RIPRRyQ
+
