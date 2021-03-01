@@ -174,5 +174,5 @@ After that git will ask you to login to your github account to upload.
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
-
+Definitely would like to add in images and colors into this application for next time. Might also be fun to play around with interactions from multiple button presses, like a way to set an "alarm", change to 12hr/24hr clocks, set a timer/countdown, etc. 
 
