@@ -1,10 +1,13 @@
 import time
+from datetime import datetime, timedelta
 import subprocess
 import digitalio
 import board
+from time import strftime, sleep
 from PIL import Image, ImageDraw, ImageFont
+from adafruit_rgb_display.rgb import color565
 import adafruit_rgb_display.st7789 as st7789
-
+import webcolors
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -60,13 +63,47 @@ font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
 
+clock = datetime.now()
+timezone = 0
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-
-    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
-
+    clock = datetime.now() + timedelta(hours=timezone)
+    # clock = datetime.datetime.now()
+    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
+    y = top
+    # clock_str = str(clock)
+    draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
+    y += font.getsize(str(clock))[1]
+    draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
+    y += font.getsize(str(clock))[1]
+    draw.text((x,y), "Bottom subtracts hour", font=font, fill="#FFFFFF")
+   # print(strftime("%m/%d/%Y %H:%M:%S"), end="", flush=True)
+   # print("\r", end="", flush=True)
+    #if buttonA.value and buttonB.value:
+     #   backlight.value = False
+    #else:
+     #   backlight.value = True
+    if buttonA.value and not buttonB.value:
+       y = top
+       draw.rectangle((0, 0, width, height), outline=0, fill=0)
+       timezone = timezone - 1
+       clock = datetime.now() + timedelta(hours=timezone)
+       draw.text((x,y), "Subtracted one hour", font=font, fill="#FFFFFF")
+    if buttonB.value and not buttonA.value:
+       y = top
+       draw.rectangle((0, 0, width, height), outline=0, fill=0)
+       timezone = timezone + 1
+       clock = datetime.now() + timedelta(hours=timezone)
+       draw.text((x,y), "Added one hour", font=font, fill="#FFFFFF")
+    if not buttonA.value and not buttonB.value:
+       draw.text((x,y), clock, font=font, fill="#FFFFFF")
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
+
