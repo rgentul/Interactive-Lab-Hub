@@ -176,3 +176,5 @@ After that git will ask you to login to your github account to upload.
 
 Definitely would like to add in images and colors into this application for next time. Might also be fun to play around with interactions from multiple button presses, like a way to set an "alarm", change to 12hr/24hr clocks, set a timer/countdown, etc. 
 
+[Some more features, and one new SD card later...](https://drive.google.com/file/d/1P2BaIlrjZi2HCHZS5pGOz2gKkBwoIQox/view?usp=sharing)
+
