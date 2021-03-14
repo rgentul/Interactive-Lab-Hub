@@ -76,23 +76,16 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     clock = datetime.now() + timedelta(hours=timezone)
-    # clock = datetime.datetime.now()
+    
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
     y = top
-    # clock_str = str(clock)
     draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
     y += font.getsize(str(clock))[1]
     draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
     y += font.getsize(str(clock))[1]
     draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
-   # print(strftime("%m/%d/%Y %H:%M:%S"), end="", flush=True)
-   # print("\r", end="", flush=True)
-    #if buttonA.value and buttonB.value:
-     #   backlight.value = False
-    #else:
-     #   backlight.value = True
+   
     if buttonA.value and not buttonB.value:
-       print(counter)
        if counter == 0:
            y = top
            draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -105,7 +98,7 @@ while True:
        elif counter == 1:
            y = top
            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           draw.text((x,y), "Dude, seriously.", font=font, fill="#FFFFFF")
+           draw.text((x,y), "You really shouldn't.", font=font, fill="#FFFFFF")
            counter += 1
        elif counter == 2:
            y = top
@@ -118,24 +111,25 @@ while True:
            draw.text((x,y), "Ok, fine. Do it again.", font=font, fill="#FFFFFF")
            counter += 1
        else:
-           print("entered image state")
            y = top
            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           image = Image.open("loan.jpg")
-           image_ratio = image.width / image.height
+           loan = Image.open("loan.jpg")
+           image_ratio = loan.width / loan.height
            screen_ratio = width/height
            if screen_ratio < image_ratio:
-              scaled_width = image.width * height // image.height
+              scaled_width = loan.width * height // loan.height
               scaled_height = height
            else:
               scaled_width = width
-              scaled_height = image.height * width // image.width
-           image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+              scaled_height = loan.height * width // loan.width
+           loan = loan.resize((scaled_width, scaled_height), Image.BICUBIC)
            x = scaled_width // 2 - width // 2
            y = scaled_height // 2 - height // 2
-           image = image.crop((x, y, x + width, y + height))
-           print(x, " ", y + height, " ", width, " ",height)
-           disp.image(image)
+           loan = loan.crop((x, y, x + width, y + height))
+           disp.image(loan, rotation)
+           time.sleep(4)
+           x = 0
+           y = 0
     if buttonB.value and not buttonA.value:
        y = top
        draw.rectangle((0, 0, width, height), outline=0, fill=0)
