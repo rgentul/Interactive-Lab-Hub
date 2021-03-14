@@ -121,7 +121,7 @@ while True:
            print("entered image state")
            y = top
            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           image = Image.open("coffee.jpg")
+           image = Image.open("loan.jpg")
            image_ratio = image.width / image.height
            screen_ratio = width/height
            if screen_ratio < image_ratio:
@@ -135,7 +135,7 @@ while True:
            y = scaled_height // 2 - height // 2
            image = image.crop((x, y, x + width, y + height))
            print(x, " ", y + height, " ", width, " ",height)
-           disp.image(image,rotation)
+           disp.image(image)
     if buttonB.value and not buttonA.value:
        y = top
        draw.rectangle((0, 0, width, height), outline=0, fill=0)
