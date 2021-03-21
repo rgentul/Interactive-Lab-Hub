@@ -101,7 +101,8 @@ def run_example():
             print("\nThe button is pressed!")
 
         else:    
-            print("\nThe button is not pressed!")
+            draw.text((x,y), "The button is not pressed!", font=font, fill="#FFFFFF")
+            y += font.getsize(str(clock))[1]
             
         time.sleep(0.02)
 
