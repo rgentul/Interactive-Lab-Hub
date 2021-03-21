@@ -5,7 +5,7 @@ import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from datetime import datetime
-import pytz
+#import pytz
 from PIL import Image, ImageDraw, ImageFont
 import busio
 import adafruit_apds9960.apds9960
