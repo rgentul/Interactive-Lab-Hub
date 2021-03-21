@@ -76,75 +76,13 @@ buttonB.switch_to_input()
 clock = datetime.now()
 timezone = 0
 counter = 0
-while True:
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    clock = datetime.now() + timedelta(hours=timezone)
+
+# Draw a black filled box to clear the image.
+draw.rectangle((0, 0, width, height), outline=0, fill=0)
+clock = datetime.now() + timedelta(hours=timezone)
     
-    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
-    y = top
-    draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
-    y += font.getsize(str(clock))[1]
-    draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
-    y += font.getsize(str(clock))[1]
-    draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
-   
-    if buttonA.value and not buttonB.value:
-       if counter == 0:
-           y = top
-           draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           timezone = timezone - 1
-           clock = datetime.now() + timedelta(hours=timezone)
-           draw.text((x,y), "Um, ok...", font=font, fill="#FFFFFF")
-           y += font.getsize(str(clock))[1]
-           draw.text((x,y), "Subtracted one hour", font=font, fill="#FFFFFF")
-           counter += 1
-       elif counter == 1:
-           y = top
-           draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           draw.text((x,y), "You really shouldn't.", font=font, fill="#FFFFFF")
-           counter += 1
-       elif counter == 2:
-           y = top
-           draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           draw.text((x,y), "Please.", font=font, fill="#FFFFFF")
-           counter += 1
-       elif counter == 3:
-           y = top
-           draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           draw.text((x,y), "Ok, fine. Do it again.", font=font, fill="#FFFFFF")
-           counter += 1
-       else:
-           y = top
-           draw.rectangle((0, 0, width, height), outline=0, fill=0)
-           loan = Image.open("loan.jpg")
-           image_ratio = loan.width / loan.height
-           screen_ratio = width/height
-           if screen_ratio < image_ratio:
-              scaled_width = loan.width * height // loan.height
-              scaled_height = height
-           else:
-              scaled_width = width
-              scaled_height = loan.height * width // loan.width
-           loan = loan.resize((scaled_width, scaled_height), Image.BICUBIC)
-           x = scaled_width // 2 - width // 2
-           y = scaled_height // 2 - height // 2
-           loan = loan.crop((x, y, x + width, y + height))
-           disp.image(loan, rotation)
-           time.sleep(4)
-           x = 0
-           y = 0
-    if buttonB.value and not buttonA.value:
-       y = top
-       draw.rectangle((0, 0, width, height), outline=0, fill=0)
-       timezone = timezone + 1
-       clock = datetime.now() + timedelta(hours=timezone)
-       draw.text((x,y), "Added one hour", font=font, fill="#FFFFFF")
-    if not buttonA.value and not buttonB.value:
-       draw.text((x,y), clock, font=font, fill="#FFFFFF")
-    # Display image.
-    disp.image(image, rotation)
-    time.sleep(1)
+#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
+y = top
 
 def run_example():
 
