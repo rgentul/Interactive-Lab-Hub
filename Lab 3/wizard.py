@@ -99,7 +99,7 @@ def run_example():
     while True:   
         
         if my_button.is_button_pressed() == True:
-            print("\nThe button is pressed!")
+            print("\nThe button is pressed!",y,x)
 
         if my_button.is_button_pressed() == False: 
             y = top
