@@ -101,7 +101,7 @@ def run_example():
         if my_button.is_button_pressed() == True:
             print("\nThe button is pressed!")
 
-        else: 
+        if my_button.is_button_pressed() == False: 
             y = top
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x,y), "The button is not pressed!", font=font, fill="#FFFFFF")
