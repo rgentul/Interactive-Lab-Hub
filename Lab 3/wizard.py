@@ -96,6 +96,9 @@ def run_example():
         return
     print("\nButton ready!")
     
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.text((x,y), "I can display things!", font=font, fill="#FFFFFF")
+    
     while True:   
         
         if my_button.is_button_pressed() == True:
