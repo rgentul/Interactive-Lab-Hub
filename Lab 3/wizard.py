@@ -85,7 +85,8 @@ clock = datetime.now() + timedelta(hours=timezone)
 y = top
 
 def run_example():
-
+    
+    y = top
     print("\nSparkFun Qwiic Button Example 1")
     my_button = qwiic_button.QwiicButton()
 
