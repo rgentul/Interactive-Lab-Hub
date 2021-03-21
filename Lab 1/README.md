@@ -93,6 +93,9 @@ You will be using your smartphone as a stand-in for the device you are prototypi
 Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
 
 We invented this tool for this lab! 
+
+If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
+
 **Give us feedback on Tinkerbelle.**
 Tinkerbelle works fairly well, although my phone did not enter fullscreen. I'd also request some more detailed setup instructions for the less CS-minded students.
 
@@ -148,6 +151,7 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
 3) We will be grading with an emphasis on creativity. 
 
+<<<<<<< HEAD
 **Document everything here.**
 
 For Part 2, I chose to expand on my initial idea a bit and incorporate sound, vibration, and iconography into the device. I wanted it to also serve a slightly more useful purpose; in this case, identifying what a dog's bark is trying to communicate. I sketched out my idea in a storyboard, and then recorded the paper prototype.
@@ -158,3 +162,6 @@ For Part 2, I chose to expand on my initial idea a bit and incorporate sound, vi
 **Video**
 https://imgur.com/a/RIPRRyQ
 
+=======
+**Document everything here. (Particularly we'd like to see the storyboard and video, although photos of the prototype are also great.)**
+>>>>>>> 1240d9fc1826d3e632b63044fba009d78f772e33
