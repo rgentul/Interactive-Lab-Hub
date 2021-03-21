@@ -8,7 +8,7 @@ from datetime import datetime
 #import pytz
 from PIL import Image, ImageDraw, ImageFont
 import busio
-import adafruit_apds9960.apds9960
+#import adafruit_apds9960.apds9960
 import time
 from i2c_button import I2C_Button
 from random import randint
