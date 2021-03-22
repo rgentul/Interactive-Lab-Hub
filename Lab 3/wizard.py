@@ -85,6 +85,7 @@ def speak(command):
     
 def new_jersey():
     counter = 0
+    Boolean answer
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
     while True:
@@ -124,14 +125,7 @@ def run_example():
     
     if stage == 0: 
         while True:   
-            if my_button.is_button_pressed() == True:
-                new_jersey()
-                if new_jersey() == False:
-                    print("dummy, you lose.")
-                if new_jersey() == True:
-                    stage += 1
-                    break
-
+            
             if my_button.is_button_pressed() == False: 
                 y = top
                 draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -143,6 +137,13 @@ def run_example():
                 y += font.getsize("A")[1]
                 disp.image(image, rotation)
                 speak(f'Press button to begin.')
+            else:
+                break
+        if new_jersey() == False:
+            print("dummy, you lose.")
+        if new_jersey() == True:
+            stage += 1
+            break
     if stage == 1:
         while True:
             print("entered stage 2")
