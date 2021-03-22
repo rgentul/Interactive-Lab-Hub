@@ -1,5 +1,6 @@
 from __future__ import print_function
 import qwiic_button 
+import adafruit_mpu6050
 import time
 import sys
 
