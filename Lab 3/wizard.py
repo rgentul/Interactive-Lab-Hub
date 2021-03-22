@@ -90,19 +90,15 @@ def run_example():
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    clock = datetime.now() + timedelta(hours=timezone)
 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
     y = top
-    draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
-    y += font.getsize(str(clock))[1]
-    draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
-    y += font.getsize(str(clock))[1]
-    draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
+    draw.text((x,y), "Get your finger ready!", font=font, fill="#FFFFFF")
+    
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
-    '''
+    
     if my_button.begin() == False:
         print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
             file=sys.stderr)
@@ -110,12 +106,7 @@ def run_example():
     print("\nButton ready!")
 
     while True:   
-
-        y = top
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
-        y += font.getsize(str(clock))[1]
-
+        
         if my_button.is_button_pressed() == True:
             print("\nThe button is pressed!",y,x)
 
@@ -123,6 +114,7 @@ def run_example():
             y = top
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x,y), "The button is not pressed!", font=font, fill="#FFFFFF")
+            disp.image(image, rotation)
 
         time.sleep(0.02)
         '''
