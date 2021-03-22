@@ -122,7 +122,7 @@ def run_example():
         return
     print("\nButton ready!")
     
-    if stage = 0:
+    if stage == 0:
         
         while True:   
             if my_button.is_button_pressed() == True:
