@@ -83,8 +83,18 @@ def speak(command):
     call(f"espeak -ven -k5 -s150 --stdout '{command}' | aplay", shell=True)
     time.sleep(0.5)
     
-def press(button):
-    button.LED_on(255)
+def new_jersey()
+    counter = 0
+    while True:
+        if my_button.is_button_pressed() == True:
+            y = top
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
+            draw.text((x,y), "True or False?", font=font, fill="#FFFFFF")
+            counter += 1
+        if counter = 2
+            return False
+        if counter = 1
+            return True        
 
 def run_example():
     
@@ -114,6 +124,10 @@ def run_example():
         
         if my_button.is_button_pressed() == True:
             print("\nThe button is pressed!",y,x)
+            if new_jersey() == False:
+                print("dummy, you lose.")
+            if new_jersey() == True:
+                counter += 1
 
         if my_button.is_button_pressed() == False: 
             y = top
@@ -126,10 +140,7 @@ def run_example():
             y += font.getsize("A")[1]
             disp.image(image, rotation)
             speak(f'Press button to begin.')
-            
-            if my_button.is_button_pressed() == True:
-                counter += 1
-                speak(f'New Jersey is the best state in the country.')
+      
             time.sleep(2)
 
         time.sleep(0.02)
