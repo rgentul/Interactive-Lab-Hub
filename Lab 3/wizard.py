@@ -258,6 +258,7 @@ def run_example():
             print("Huzzah!")
             speak(f'Correct. He deserves extra credit points as well. His lab is just that amazing.')
     speak(f'Thank you for playing!')
+    backlight.value = False
 
 if __name__ == '__main__':
     try:
