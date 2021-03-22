@@ -141,8 +141,6 @@ def run_example():
             y += font.getsize("A")[1]
             disp.image(image, rotation)
             speak(f'Hold button to begin.')
-      
-            time.sleep(2)
 
         time.sleep(0.02)
 
