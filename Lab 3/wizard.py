@@ -3,6 +3,11 @@ import qwiic_button
 import time
 import sys
 
+import busio
+import enum
+import os
+import signal
+
 from datetime import datetime, timedelta
 import subprocess
 import digitalio
