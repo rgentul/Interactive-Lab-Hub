@@ -181,7 +181,6 @@ def run_example():
         if secondQ == True:
             print("dummy, you lose.")
             speak(f'No. You could not have been more wrong.')
-            break
         if secondQ == False:
             print("Huzzah!")
             stage += 1
