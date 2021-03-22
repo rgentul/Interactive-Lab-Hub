@@ -117,7 +117,7 @@ def run_example():
         if my_button.is_button_pressed() == False: 
             y = top
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x,y), "Answer correctly to proceed.", font=font, fill="#FFFFFF")
+            draw.text((x,y), "Answer correctly to win.", font=font, fill="#FFFFFF")
             y += font.getsize("A")[1]
             draw.text((x,y), "One press = true", font=font, fill="#FFFFFF")
             y += font.getsize("A")[1]
@@ -125,6 +125,10 @@ def run_example():
             y += font.getsize("A")[1]
             disp.image(image, rotation)
             speak(f'Press button to begin.')
+            
+            if my_button.is_button_pressed() == True:
+                counter += 1
+                speak(f'New Jersey is the best state in the country.')
             time.sleep(2)
 
         time.sleep(0.02)
