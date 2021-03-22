@@ -88,7 +88,7 @@ def run_example():
     
     while True:
         y = top
-        print("\nSparkFun Qwiic Button Example 1")
+        #print("\nSparkFun Qwiic Button Example 1")
         my_button = qwiic_button.QwiicButton()
 
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
