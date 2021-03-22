@@ -101,7 +101,8 @@ def run_example():
         draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
         y += font.getsize(str(clock))[1]
         draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
-        
+        # Display image.
+        disp.image(image, rotation)
         time.sleep(1)
         '''
         if my_button.begin() == False:
