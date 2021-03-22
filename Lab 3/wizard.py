@@ -92,9 +92,9 @@ def new_jersey():
     draw.text((x,y), "NJ is the best state", font=font, fill="#FFFFFF")
     disp.image(image, rotation)
     speak(f'New Jersey is the best state.')
-    time.sleep(1)
+    time.sleep(0.5)
     speak(f'Enter your answer now.')
-    t_end = time.time() + 10
+    t_end = time.time() + 5
     while time.time() < t_end:
         if my_button.is_button_pressed() == True:
             answer = True
@@ -113,9 +113,9 @@ def poodle():
     draw.text((x,y), "a poodle.", font=font, fill="#FFFFFF")
     disp.image(image, rotation)
     speak(f'No one respectable owns a poodle.')
-    time.sleep(1)
+    time.sleep(0.5)
     speak(f'Enter your answer now.')
-    t_end = time.time() + 10
+    t_end = time.time() + 5
     while time.time() < t_end:
         if my_button.is_button_pressed() == True:
             answer = True
@@ -169,6 +169,7 @@ def run_example():
             print("dummy, you lose.")
         if firstQ == True:
             print("Huzzah!")
+            speak(f'Well done. Moving on...')
             stage += 1
             
     if stage == 1:
