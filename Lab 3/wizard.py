@@ -98,7 +98,7 @@ def start():
 
     model = Model("model")
     # You can also specify the possible word list
-    rec = KaldiRecognizer(model, wf.getframerate(), "zero oh one two three four five six seven eight nine [unk]")
+    rec = KaldiRecognizer(model, wf.getframerate(), "begin [unk]")
 
     while True:
         data = wf.readframes(4000)
