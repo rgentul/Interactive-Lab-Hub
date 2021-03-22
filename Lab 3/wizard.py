@@ -73,16 +73,7 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
-clock = datetime.now()
-timezone = 0
 counter = 0
-
-# Draw a black filled box to clear the image.
-draw.rectangle((0, 0, width, height), outline=0, fill=0)
-clock = datetime.now() + timedelta(hours=timezone)
-    
-#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
-y = top
 
 def run_example():
     print("\nSparkFun Qwiic Button Example 1")
