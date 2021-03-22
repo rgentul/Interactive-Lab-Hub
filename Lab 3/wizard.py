@@ -85,6 +85,7 @@ def speak(command):
     
 def new_jersey():
     answer = None
+    counter = 0
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
     speak(f'New Jersey is the best state.')
@@ -94,7 +95,14 @@ def new_jersey():
         if my_button.is_button_pressed() == True:
             answer = True
             return answer
-        time.sleep(5)
+        else:
+            if counter < 5:
+                counter += 1
+                time.sleep(1)
+                continue
+            else
+                answer = False
+                return answer
     answer = False
     return answer
 
