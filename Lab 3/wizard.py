@@ -88,8 +88,11 @@ def new_jersey():
     counter = 0
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
+    y = top
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.text((x,y), "NJ is the best state", font=font, fill="#FFFFFF")
     speak(f'New Jersey is the best state.')
-    time.sleep(2)
+    time.sleep(1)
     speak(f'Enter your answer now.')
     t_end = time.time() + 10
     while time.time() < t_end:
@@ -135,6 +138,8 @@ def run_example():
                 y += font.getsize("A")[1]
                 draw.text((x,y), "If False, don't press.", font=font, fill="#FFFFFF")
                 y += font.getsize("A")[1]
+                draw.text((x,y), "10 secs per question", font=font, fill="#FFFFFF")
+                y += font.getsize("A")[1]
                 disp.image(image, rotation)
                 speak(f'Press button to begin.')
             else:
@@ -147,8 +152,11 @@ def run_example():
             stage += 1
             
     if stage == 1:
+        y = top
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        draw.text((x,y), "Correct. Next question.", font=font, fill="#FFFFFF")
         while True:
-            print("entered stage 2")
+            print("more questions to come")
             time.sleep(2)
 
 if __name__ == '__main__':
