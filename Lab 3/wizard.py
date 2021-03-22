@@ -140,7 +140,7 @@ def run_example():
                 speak(f'Press button to begin.')
             else:
                 break
-        firstQ = newJersey()
+        firstQ = new_jersey()
         if firstQ == False:
             print("dummy, you lose.")
         if firstQ == True:
