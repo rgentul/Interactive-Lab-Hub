@@ -85,25 +85,23 @@ clock = datetime.now() + timedelta(hours=timezone)
 y = top
 
 def run_example():
-    
-    while True:
-        #print("\nSparkFun Qwiic Button Example 1")
-        my_button = qwiic_button.QwiicButton()
+    print("\nSparkFun Qwiic Button Example 1")
+    my_button = qwiic_button.QwiicButton()
 
-        # Draw a black filled box to clear the image.
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        clock = datetime.now() + timedelta(hours=timezone)
-    
-        #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
-        y = top
-        draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
-        y += font.getsize(str(clock))[1]
-        draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
-        y += font.getsize(str(clock))[1]
-        draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
-        # Display image.
-        disp.image(image, rotation)
-        time.sleep(1)
+    # Draw a black filled box to clear the image.
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    clock = datetime.now() + timedelta(hours=timezone)
+
+    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
+    y = top
+    draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
+    y += font.getsize(str(clock))[1]
+    draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
+    y += font.getsize(str(clock))[1]
+    draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
+    # Display image.
+    disp.image(image, rotation)
+    time.sleep(1)
         '''
         if my_button.begin() == False:
             print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
