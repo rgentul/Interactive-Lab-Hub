@@ -97,7 +97,7 @@ def run_example():
     
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(3)
     
     if my_button.begin() == False:
         print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
@@ -113,7 +113,7 @@ def run_example():
         if my_button.is_button_pressed() == False: 
             y = top
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x,y), "The button is not pressed!", font=font, fill="#FFFFFF")
+            draw.text((x,y), "Say Start to begin.", font=font, fill="#FFFFFF")
             disp.image(image, rotation)
 
         time.sleep(0.02)
