@@ -86,36 +86,37 @@ y = top
 
 def run_example():
     
-    y = top
-    print("\nSparkFun Qwiic Button Example 1")
-    my_button = qwiic_button.QwiicButton()
-
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    draw.text((x,y), "I can display things!", font=font, fill="#FFFFFF")
-    
-    if my_button.begin() == False:
-        print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
-            file=sys.stderr)
-        return
-    print("\nButton ready!")
-    
-    while True:   
-        
+    while True:
         y = top
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
-        y += font.getsize(str(clock))[1]
-        
-        if my_button.is_button_pressed() == True:
-            print("\nThe button is pressed!",y,x)
+        print("\nSparkFun Qwiic Button Example 1")
+        my_button = qwiic_button.QwiicButton()
 
-        if my_button.is_button_pressed() == False: 
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        draw.text((x,y), "I can display things!", font=font, fill="#FFFFFF")
+        '''
+        if my_button.begin() == False:
+            print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
+                file=sys.stderr)
+            return
+        print("\nButton ready!")
+
+        while True:   
+
             y = top
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x,y), "The button is not pressed!", font=font, fill="#FFFFFF")
-            
-        time.sleep(0.02)
+            draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
+            y += font.getsize(str(clock))[1]
 
+            if my_button.is_button_pressed() == True:
+                print("\nThe button is pressed!",y,x)
+
+            if my_button.is_button_pressed() == False: 
+                y = top
+                draw.rectangle((0, 0, width, height), outline=0, fill=0)
+                draw.text((x,y), "The button is not pressed!", font=font, fill="#FFFFFF")
+
+            time.sleep(0.02)
+            '''
 if __name__ == '__main__':
     try:
         run_example()
