@@ -79,8 +79,6 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
-counter = 0
-
 def speak(command):
     call(f"espeak -ven -k5 -s150 --stdout '{command}' | aplay", shell=True)
     time.sleep(0.5)
@@ -89,6 +87,9 @@ def press(button):
     button.LED_on(255)
 
 def run_example():
+    
+    counter = 0
+    
     print("\nSparkFun Qwiic Button Example 1")
     my_button = qwiic_button.QwiicButton()
 
