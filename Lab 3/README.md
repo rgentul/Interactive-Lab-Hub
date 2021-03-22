@@ -91,6 +91,8 @@ I attempted to add a speech2text element into this lab to at least have the user
 
 Here's a full video of the system in action: https://drive.google.com/file/d/11_2mAgMTeQBhfTVOzWrkGGtjAZEyV3GH/view?usp=sharing
 
+Credit due to: Niki Agrawal and Ross Kleinrock for feedback, and to Sam Lee and Snigdha Singhania for getting some tricky code to work.
+
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
