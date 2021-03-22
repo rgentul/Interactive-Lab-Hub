@@ -85,7 +85,7 @@ def speak(command):
     
 def new_jersey():
     counter = 0
-    Boolean answer
+    answer = None
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
     while True:
@@ -95,9 +95,10 @@ def new_jersey():
             draw.text((x,y), "True or False?", font=font, fill="#FFFFFF")
             counter += 1
         if counter == 2:
-            return False
+            answer = False
+            return answer
         if counter == 1:
-            return True        
+            answer = True
 
 def run_example():
     
@@ -139,11 +140,12 @@ def run_example():
                 speak(f'Press button to begin.')
             else:
                 break
-        if new_jersey() == False:
+        firstQ = newJersey()
+        if firstQ == False:
             print("dummy, you lose.")
-        if new_jersey() == True:
+        if firstQ == True:
             stage += 1
-            break
+            
     if stage == 1:
         while True:
             print("entered stage 2")
