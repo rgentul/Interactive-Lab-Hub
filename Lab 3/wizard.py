@@ -122,7 +122,7 @@ def run_example():
                     print(rec.Result())
                 else:
                      print(rec.PartialResult())
-               print(rec.FinalResult())
+                print(rec.FinalResult())
 
         time.sleep(0.02)
 
