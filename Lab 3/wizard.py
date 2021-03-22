@@ -105,7 +105,8 @@ def start():
         if len(data) == 0:
             break
         if rec.AcceptWaveform(data):
-            print(rec.Result())
+            if 'begin' in rec.PartialResult():
+                print(rec.Result())
         else:
            print(rec.PartialResult())
 
