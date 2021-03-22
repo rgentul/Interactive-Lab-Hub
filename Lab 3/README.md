@@ -74,6 +74,8 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 *what was the feedback? Who did it come from?*
 
+Feedback came from my husband. He liked the idea, but wanted to see some more complexity with images or sound. I was initially going to include more imagery, but ran out of time getting the core components set up. 
+
 ## Prototype your system
 
 The system should:
@@ -99,18 +101,17 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-*your answer here*
+The button was successful, but a little unintuitive. My thought was that a button was the simplest controller to integrate and would therefore be easiest to pick up, but I now think that I should have tried to use both the red and green buttons so that True and False had separate inputs.
+
+The varying responses to right/wrong answers was entertaining and worth the extra effort. The voice was difficult to understand, as predicted.
 
 ### What worked well about the controller and what didn't?
+Similar to above. The button functioned as planned, but it was almost too simple for the task.
 
-*your answer here*
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-
-*your answer here*
-
+Better voice output is a must. I'd love to add even more audio outputs to my library as well to keep the game interesting. If possible, I could output a scoreboard to the LED screen so the user can keep better track of where they are in the game.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-
-*your answer here*
+Voice from the user to begin, pause, or end the interaction would be a great way to add extra functionality. I'd also like to ultimately add A/B/C/D choices for questions using the joystick.
 
