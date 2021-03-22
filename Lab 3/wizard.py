@@ -91,6 +91,7 @@ def new_jersey():
     y = top
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     draw.text((x,y), "NJ is the best state", font=font, fill="#FFFFFF")
+    disp.image(image, rotation)
     speak(f'New Jersey is the best state.')
     time.sleep(1)
     speak(f'Enter your answer now.')
@@ -155,6 +156,7 @@ def run_example():
         y = top
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         draw.text((x,y), "Correct. Next question.", font=font, fill="#FFFFFF")
+        disp.image(image, rotation)
         while True:
             print("more questions to come")
             time.sleep(2)
