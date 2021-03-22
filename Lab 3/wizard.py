@@ -83,7 +83,7 @@ def speak(command):
     call(f"espeak -ven -k5 -s150 --stdout '{command}' | aplay", shell=True)
     time.sleep(0.5)
     
-def new_jersey()
+def new_jersey():
     counter = 0
     while True:
         if my_button.is_button_pressed() == True:
