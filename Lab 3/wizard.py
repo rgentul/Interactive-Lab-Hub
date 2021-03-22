@@ -101,11 +101,12 @@ def run_example():
     
     while True:   
         
+        y = top
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
+        y += font.getsize(str(clock))[1]
+        
         if my_button.is_button_pressed() == True:
-            y = top
-            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
-            y += font.getsize(str(clock))[1]
             print("\nThe button is pressed!",y,x)
 
         if my_button.is_button_pressed() == False: 
