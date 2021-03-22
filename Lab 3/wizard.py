@@ -85,7 +85,6 @@ def speak(command):
     
 def new_jersey():
     answer = None
-    counter = 0
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
     y = top
@@ -93,6 +92,27 @@ def new_jersey():
     draw.text((x,y), "NJ is the best state", font=font, fill="#FFFFFF")
     disp.image(image, rotation)
     speak(f'New Jersey is the best state.')
+    time.sleep(1)
+    speak(f'Enter your answer now.')
+    t_end = time.time() + 10
+    while time.time() < t_end:
+        if my_button.is_button_pressed() == True:
+            answer = True
+            return answer
+    answer = False
+    return answer
+
+def poodle():
+    answer = None
+    my_button = qwiic_button.QwiicButton()
+    print("in poodle")
+    y = top
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.text((x,y), "No one respectable owns", font=font, fill="#FFFFFF")
+    y += font.getsize("A")[1]
+    draw.text((x,y), "a poodle.", font=font, fill="#FFFFFF")
+    disp.image(image, rotation)
+    speak(f'No one respectable owns a poodle.')
     time.sleep(1)
     speak(f'Enter your answer now.')
     t_end = time.time() + 10
@@ -129,7 +149,6 @@ def run_example():
     
     if stage == 0: 
         while True:   
-            
             if my_button.is_button_pressed() == False: 
                 y = top
                 draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -157,9 +176,18 @@ def run_example():
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         draw.text((x,y), "Correct. Next question.", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
-        while True:
-            print("more questions to come")
-            time.sleep(2)
+        time.sleep(2)
+        secondQ = poodle()
+        if secondQ == True:
+            print("dummy, you lose.")
+            speak(f'No. You could not have been more wrong.')
+            break
+        if secondQ == False:
+            print("Huzzah!")
+            stage += 1
+            
+     if stage == 2:
+        
 
 if __name__ == '__main__':
     try:
