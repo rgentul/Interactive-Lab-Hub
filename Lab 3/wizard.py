@@ -91,18 +91,11 @@ def new_jersey():
     speak(f'New Jersey is the best state.')
     time.sleep(2)
     speak(f'Enter your answer now.')
-    while True:
+    t_end = time.time() + 10
+    while time.time() < t_end:
         if my_button.is_button_pressed() == True:
             answer = True
             return answer
-        else:
-            if counter < 5:
-                counter += 1
-                time.sleep(1)
-                continue
-            else:
-                answer = False
-                return answer
     answer = False
     return answer
 
