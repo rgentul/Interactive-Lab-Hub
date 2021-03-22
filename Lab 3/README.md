@@ -98,6 +98,9 @@ Credit due to: Niki Agrawal and Ross Kleinrock for feedback, and to Sam Lee and 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
+**Some more feedback**
+Ross: I find it weird as the user that you take no action if it's false. I'd really like there to be a false button. When i first saw your sketch I must not have paid close enough attention. I thought if you were wrong or waited 5 seconds your answer would be market wrong. I think this approach would make more sense. You might also want to clean up the language. "you are incorrect, the answer was true.." etc. Also there seems to be a major bug in the code, since the system thinks NJ is the best state, and I would definitely fix that before moving on to lab 4.
+
 Answer the following:
 
 ### What worked well about the system and what didn't?
