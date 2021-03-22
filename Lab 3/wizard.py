@@ -126,7 +126,7 @@ def poodle():
 def sweatpants():
     answer = None
     my_button = qwiic_button.QwiicButton()
-    print("in poodle")
+    print("in sweatpants")
     y = top
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     draw.text((x,y), "Sweatpants can be worn", font=font, fill="#FFFFFF")
@@ -134,6 +134,27 @@ def sweatpants():
     draw.text((x,y), "outside on certain occasions", font=font, fill="#FFFFFF")
     disp.image(image, rotation)
     speak(f'Sweatpants can be worn outside on certain occasions.')
+    time.sleep(0.5)
+    speak(f'Enter your answer now.')
+    t_end = time.time() + 5
+    while time.time() < t_end:
+        if my_button.is_button_pressed() == True:
+            answer = True
+            return answer
+    answer = False
+    return answer
+
+def rob():
+    answer = None
+    my_button = qwiic_button.QwiicButton()
+    print("in rob")
+    y = top
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.text((x,y), "Rob should get full", font=font, fill="#FFFFFF")
+    y += font.getsize("A")[1]
+    draw.text((x,y), "credit for this lab.", font=font, fill="#FFFFFF")
+    disp.image(image, rotation)
+    speak(f'Rob should get full credit for this lab.')
     time.sleep(0.5)
     speak(f'Enter your answer now.')
     t_end = time.time() + 5
@@ -222,7 +243,21 @@ def run_example():
             print("Huzzah!")
             speak(f'Yes. Get ready for question 4.')
             stage += 1
-        
+            
+    if stage == 3:
+        y = top
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        draw.text((x,y), "Correct. Next question.", font=font, fill="#FFFFFF")
+        disp.image(image, rotation)
+        time.sleep(2)
+        fourthQ = rob()
+        if fourthQ == True:
+            print("dummy, you lose.")
+            speak(f'Perfect. You have permission to score Rob one hundred percent on this lab.')
+        if fourthQ == False:
+            print("Huzzah!")
+            speak(f'Correct. He deserves extra credit points as well. His lab is just that amazing.')
+    speak(f'Thank you for playing!')
 
 if __name__ == '__main__':
     try:
