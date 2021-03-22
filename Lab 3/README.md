@@ -83,8 +83,13 @@ The system should:
 
 *Document how the system works*
 
+This interface uses the button to have the user answer yes/no to questions asked by the Pi. I'm using both audio via speakers and text on the LED screen because the voice isn't terribly clear on its own. If users press the button once after a question is asked, "True" is marked. If nothing is pressed and 5 seconds pass, "False" is marked. I've inputted varying audio responses for right and wrong answers. One wrong answer or answering all 4 questions correctly will end the program.
+
+I attempted to add a speech2text element into this lab to at least have the user announce when they're ready to begin, but I got stuck downloading the Vosk model. Seems like the link to download the model is broken: https://alphacephei.com/vosk/models
 
 *Include videos or screencaptures of both the system and the controller.*
+
+Here's a full video of the system in action: https://drive.google.com/file/d/11_2mAgMTeQBhfTVOzWrkGGtjAZEyV3GH/view?usp=sharing
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
