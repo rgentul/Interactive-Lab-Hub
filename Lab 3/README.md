@@ -70,6 +70,8 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 ## Share your idea sketches with Zoom Room mates and get feedback
 
+![image](https://user-images.githubusercontent.com/66213163/111997097-117ba780-8af1-11eb-90be-e0dcce3bed1c.png)
+
 *what was the feedback? Who did it come from?*
 
 ## Prototype your system
@@ -80,6 +82,7 @@ The system should:
 * require participants to speak to it. 
 
 *Document how the system works*
+
 
 *Include videos or screencaptures of both the system and the controller.*
 
