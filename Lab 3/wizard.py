@@ -3,10 +3,6 @@ import qwiic_button
 import time
 import sys
 
-from vosk import Model, KaldiRecognizer
-import os
-import wave
-
 from datetime import datetime, timedelta
 import subprocess
 import digitalio
@@ -79,8 +75,9 @@ buttonB.switch_to_input()
 
 counter = 0
 
-model = Model("model")
-rec = Kaldirecognizer(model, wf.getframerate(), "zero oh one two three four five six seven eight nine [unk]")
+def speak(command):
+    call(f"espeak -ven -k5 -s150 --stdout '{command}' | aplay", shell=True)
+    time.sleep(0.5)
 
 def run_example():
     print("\nSparkFun Qwiic Button Example 1")
@@ -113,16 +110,8 @@ def run_example():
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x,y), "Say Start to begin.", font=font, fill="#FFFFFF")
             disp.image(image, rotation)
+            speak(f'Say Start to begin.')
             time.sleep(2)
-            while True:
-                data = wf.readframes(4000)
-                if len(data) == 0:
-                    break
-                if rec.AcceptWaveform(data):
-                    print(rec.Result())
-                else:
-                     print(rec.PartialResult())
-                print(rec.FinalResult())
 
         time.sleep(0.02)
 
