@@ -90,14 +90,14 @@ def run_example():
     print("\nSparkFun Qwiic Button Example 1")
     my_button = qwiic_button.QwiicButton()
 
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.text((x,y), "I can display things!", font=font, fill="#FFFFFF")
+    
     if my_button.begin() == False:
         print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
             file=sys.stderr)
         return
     print("\nButton ready!")
-    
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    draw.text((x,y), "I can display things!", font=font, fill="#FFFFFF")
     
     while True:   
         
