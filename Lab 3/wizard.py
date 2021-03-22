@@ -84,7 +84,6 @@ def speak(command):
     time.sleep(0.5)
     
 def new_jersey():
-    counter = 0
     answer = None
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
@@ -93,15 +92,11 @@ def new_jersey():
     speak(f'Enter your answer now.')
     while True:
         if my_button.is_button_pressed() == True:
-            y = top
-            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x,y), "True or False?", font=font, fill="#FFFFFF")
-            counter += 1
-        if counter == 2:
-            answer = False
-            return answer
-        if counter == 1:
             answer = True
+            return answer
+        time.sleep(5)
+    answer = False
+    return answer
 
 def run_example():
     
@@ -135,9 +130,9 @@ def run_example():
                 draw.rectangle((0, 0, width, height), outline=0, fill=0)
                 draw.text((x,y), "Answer correctly to win.", font=font, fill="#FFFFFF")
                 y += font.getsize("A")[1]
-                draw.text((x,y), "One press = true", font=font, fill="#FFFFFF")
+                draw.text((x,y), "One press = True", font=font, fill="#FFFFFF")
                 y += font.getsize("A")[1]
-                draw.text((x,y), "Two presses = false", font=font, fill="#FFFFFF")
+                draw.text((x,y), "If False, don't press.", font=font, fill="#FFFFFF")
                 y += font.getsize("A")[1]
                 disp.image(image, rotation)
                 speak(f'Press button to begin.')
@@ -147,6 +142,7 @@ def run_example():
         if firstQ == False:
             print("dummy, you lose.")
         if firstQ == True:
+            print("Huzzah!")
             stage += 1
             
     if stage == 1:
