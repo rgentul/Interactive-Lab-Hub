@@ -88,7 +88,8 @@ def speak(command):
     
 def start():
     if not os.path.exists("model"):
-    print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unp$    exit (1)
+        print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unp$    
+        exit (1)
 
     wf = wave.open(sys.argv[1], "rb")
     if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE":
