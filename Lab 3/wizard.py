@@ -85,7 +85,8 @@ buttonB.switch_to_input()
 def speak(command):
     call(f"espeak -ven -k5 -s150 --stdout '{command}' | aplay", shell=True)
     time.sleep(0.5)
-    
+
+'''
 def start():
     if not os.path.exists("model"):
         print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unpack as 'model' in the current folder.")
@@ -111,6 +112,7 @@ def start():
            print(rec.PartialResult())
 
     print(rec.FinalResult())
+'''
     
 def new_jersey():
     answer = None
@@ -232,8 +234,8 @@ def run_example():
                 draw.text((x,y), "10 secs per question", font=font, fill="#FFFFFF")
                 y += font.getsize("A")[1]
                 disp.image(image, rotation)
-                #speak(f'Press button to begin.')
-                start()
+                speak(f'Press button to begin.')
+                #start()
             else:
                 break
         firstQ = new_jersey()
