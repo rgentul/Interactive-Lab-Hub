@@ -7,6 +7,7 @@ import busio
 import enum
 import os
 import signal
+from subprocess import call, Popen
 
 from datetime import datetime, timedelta
 import subprocess
