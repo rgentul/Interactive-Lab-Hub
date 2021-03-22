@@ -1,6 +1,5 @@
 from __future__ import print_function
 import qwiic_button 
-import adafruit_mpu6050
 import time
 import sys
 
@@ -8,6 +7,9 @@ import busio
 import enum
 import os
 import signal
+import wave
+
+from vosk import Model, KaldiRecognizer
 from subprocess import call, Popen
 
 from datetime import datetime, timedelta
@@ -85,12 +87,8 @@ def speak(command):
     time.sleep(0.5)
     
 def start():
-    i2c = busio.I2C(board.SCL, board.SDA)
-    mpu = adafruit_mpu6050.MPU6050(i2c)
-
     if not os.path.exists("model"):
-        print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unpack as 'model' in the current folder.")
-        exit (1)
+    print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unp$    exit (1)
 
     wf = wave.open(sys.argv[1], "rb")
     if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE":
@@ -99,14 +97,18 @@ def start():
 
     model = Model("model")
     # You can also specify the possible word list
-    rec = KaldiRecognizer(model, wf.getframerate(), "begin")
-    
+    rec = KaldiRecognizer(model, wf.getframerate(), "zero oh one two three four five six seven eight nine [unk]")
+
     while True:
         data = wf.readframes(4000)
         if len(data) == 0:
             break
         if rec.AcceptWaveform(data):
             print(rec.Result())
+        else:
+           print(rec.PartialResult())
+
+    print(rec.FinalResult())
     
 def new_jersey():
     answer = None
