@@ -89,6 +89,8 @@ def new_jersey():
     my_button = qwiic_button.QwiicButton()
     print("in new jersey")
     speak(f'New Jersey is the best state.')
+    time.sleep(2)
+    speak(f'Enter your answer now.')
     while True:
         if my_button.is_button_pressed() == True:
             y = top
