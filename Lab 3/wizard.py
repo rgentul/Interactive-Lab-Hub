@@ -83,6 +83,30 @@ def speak(command):
     call(f"espeak -ven -k5 -s150 --stdout '{command}' | aplay", shell=True)
     time.sleep(0.5)
     
+def start():
+    i2c = busio.I2C(board.SCL, board.SDA)
+    mpu = adafruit_mpu6050.MPU6050(i2c)
+
+    if not os.path.exists("model"):
+        print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unpack as 'model' in the current folder.")
+        exit (1)
+
+    wf = wave.open(sys.argv[1], "rb")
+    if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE":
+        print ("Audio file must be WAV format mono PCM.")
+        exit (1)
+
+    model = Model("model")
+    # You can also specify the possible word list
+    rec = KaldiRecognizer(model, wf.getframerate(), "begin")
+    
+    while True:
+        data = wf.readframes(4000)
+        if len(data) == 0:
+            break
+        if rec.AcceptWaveform(data):
+            print(rec.Result())
+    
 def new_jersey():
     answer = None
     my_button = qwiic_button.QwiicButton()
@@ -203,7 +227,8 @@ def run_example():
                 draw.text((x,y), "10 secs per question", font=font, fill="#FFFFFF")
                 y += font.getsize("A")[1]
                 disp.image(image, rotation)
-                speak(f'Press button to begin.')
+                #speak(f'Press button to begin.')
+                start()
             else:
                 break
         firstQ = new_jersey()
