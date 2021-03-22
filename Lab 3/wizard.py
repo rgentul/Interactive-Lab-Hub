@@ -116,7 +116,7 @@ def run_example():
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x,y), "Say Start to begin.", font=font, fill="#FFFFFF")
             disp.image(image, rotation)
-            speak(f'Say Start to begin.')
+            speak(f'Press button to begin.')
             time.sleep(2)
 
         time.sleep(0.02)
