@@ -117,7 +117,7 @@ def run_example():
             disp.image(image, rotation)
 
         time.sleep(0.02)
-        '''
+
 if __name__ == '__main__':
     try:
         run_example()
