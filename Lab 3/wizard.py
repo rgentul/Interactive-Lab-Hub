@@ -123,6 +123,27 @@ def poodle():
     answer = False
     return answer
 
+def sweatpants():
+    answer = None
+    my_button = qwiic_button.QwiicButton()
+    print("in poodle")
+    y = top
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.text((x,y), "Sweatpants can be worn", font=font, fill="#FFFFFF")
+    y += font.getsize("A")[1]
+    draw.text((x,y), "outside on certain occasions", font=font, fill="#FFFFFF")
+    disp.image(image, rotation)
+    speak(f'Sweatpants can be worn outside on certain occasions.')
+    time.sleep(0.5)
+    speak(f'Enter your answer now.')
+    t_end = time.time() + 5
+    while time.time() < t_end:
+        if my_button.is_button_pressed() == True:
+            answer = True
+            return answer
+    answer = False
+    return answer
+
 def run_example():
     
     stage = 0
@@ -184,9 +205,23 @@ def run_example():
             speak(f'No. You could not have been more wrong.')
         if secondQ == False:
             print("Huzzah!")
+            speak(f'Very good. Here comes question 3.')
             stage += 1
             
-    #if stage == 2:
+    if stage == 2:
+        y = top
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        draw.text((x,y), "Correct. Next question.", font=font, fill="#FFFFFF")
+        disp.image(image, rotation)
+        time.sleep(2)
+        thirdQ = sweatpants()
+        if thirdQ == True:
+            print("dummy, you lose.")
+            speak(f'Absolutely not. You are an adult, wear real pants.')
+        if thirdQ == False:
+            print("Huzzah!")
+            speak(f'Yes. Get ready for question 4.')
+            stage += 1
         
 
 if __name__ == '__main__':
