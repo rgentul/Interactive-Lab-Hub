@@ -85,6 +85,7 @@ def speak(command):
     
 def new_jersey():
     counter = 0
+    my_button = qwiic_button.QwiicButton()
     while True:
         if my_button.is_button_pressed() == True:
             y = top
@@ -139,7 +140,7 @@ def run_example():
             draw.text((x,y), "Two presses = false", font=font, fill="#FFFFFF")
             y += font.getsize("A")[1]
             disp.image(image, rotation)
-            speak(f'Press button to begin.')
+            speak(f'Hold button to begin.')
       
             time.sleep(2)
 
