@@ -100,7 +100,7 @@ def new_jersey():
                 counter += 1
                 time.sleep(1)
                 continue
-            else
+            else:
                 answer = False
                 return answer
     answer = False
