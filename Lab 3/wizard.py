@@ -186,7 +186,7 @@ def run_example():
             print("Huzzah!")
             stage += 1
             
-    if stage == 2:
+    #if stage == 2:
         
 
 if __name__ == '__main__':
