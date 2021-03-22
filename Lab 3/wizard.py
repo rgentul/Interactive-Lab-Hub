@@ -100,7 +100,7 @@ def new_jersey():
 
 def run_example():
     
-    counter = 0
+    stage = 0
     
     print("\nSparkFun Qwiic Button Example 1")
     my_button = qwiic_button.QwiicButton()
@@ -121,29 +121,28 @@ def run_example():
             file=sys.stderr)
         return
     print("\nButton ready!")
-
-    while True:   
+    
+    if stage = 0:
         
-        if my_button.is_button_pressed() == True:
-            new_jersey()
-            if new_jersey() == False:
-                print("dummy, you lose.")
-            if new_jersey() == True:
-                counter += 1
+        while True:   
+            if my_button.is_button_pressed() == True:
+                new_jersey()
+                if new_jersey() == False:
+                    print("dummy, you lose.")
+                if new_jersey() == True:
+                    stage += 1
 
-        if my_button.is_button_pressed() == False: 
-            y = top
-            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x,y), "Answer correctly to win.", font=font, fill="#FFFFFF")
-            y += font.getsize("A")[1]
-            draw.text((x,y), "One press = true", font=font, fill="#FFFFFF")
-            y += font.getsize("A")[1]
-            draw.text((x,y), "Two presses = false", font=font, fill="#FFFFFF")
-            y += font.getsize("A")[1]
-            disp.image(image, rotation)
-            speak(f'Press button to begin.')
-
-        time.sleep(0.02)
+            if my_button.is_button_pressed() == False: 
+                y = top
+                draw.rectangle((0, 0, width, height), outline=0, fill=0)
+                draw.text((x,y), "Answer correctly to win.", font=font, fill="#FFFFFF")
+                y += font.getsize("A")[1]
+                draw.text((x,y), "One press = true", font=font, fill="#FFFFFF")
+                y += font.getsize("A")[1]
+                draw.text((x,y), "Two presses = false", font=font, fill="#FFFFFF")
+                y += font.getsize("A")[1]
+                disp.image(image, rotation)
+                speak(f'Press button to begin.')
 
 if __name__ == '__main__':
     try:
