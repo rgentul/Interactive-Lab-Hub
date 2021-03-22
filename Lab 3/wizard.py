@@ -143,7 +143,7 @@ def run_example():
                 y += font.getsize("A")[1]
                 disp.image(image, rotation)
                 speak(f'Press button to begin.')
-    if stage == 1
+    if stage == 1:
         while True:
             print("entered stage 2")
             time.sleep(2)
