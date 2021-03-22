@@ -91,9 +91,9 @@ def new_jersey():
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x,y), "True or False?", font=font, fill="#FFFFFF")
             counter += 1
-        if counter = 2:
+        if counter == 2:
             return False
-        if counter = 1:
+        if counter == 1:
             return True        
 
 def run_example():
