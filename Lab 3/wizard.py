@@ -124,7 +124,7 @@ def run_example():
     while True:   
         
         if my_button.is_button_pressed() == True:
-            print("\nThe button is pressed!",y,x)
+            new_jersey()
             if new_jersey() == False:
                 print("dummy, you lose.")
             if new_jersey() == True:
