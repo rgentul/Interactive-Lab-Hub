@@ -87,12 +87,22 @@ y = top
 def run_example():
     
     while True:
-        y = top
         #print("\nSparkFun Qwiic Button Example 1")
         my_button = qwiic_button.QwiicButton()
 
+        # Draw a black filled box to clear the image.
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        draw.text((x,y), "I can display things!", font=font, fill="#FFFFFF")
+        clock = datetime.now() + timedelta(hours=timezone)
+    
+        #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
+        y = top
+        draw.text((x,y), format(clock, '%H:%M:%S'), font=font, fill="#FFFFFF")
+        y += font.getsize(str(clock))[1]
+        draw.text((x,y), "Top adds hour", font=font, fill="#FFFFFF")
+        y += font.getsize(str(clock))[1]
+        draw.text((x,y), "Don't press lower button", font=font, fill="#FFFFFF")
+        
+        time.sleep(1)
         '''
         if my_button.begin() == False:
             print("\nThe Qwiic Button isn't connected to the system. Please check your connection", \
