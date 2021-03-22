@@ -115,14 +115,14 @@ def run_example():
             disp.image(image, rotation)
             time.sleep(2)
             while True:
-            data = wf.readframes(4000)
-            if len(data) == 0:
-                break
-            if rec.AcceptWaveform(data):
-                print(rec.Result())
-            else:
-                 print(rec.PartialResult())
-           print(rec.FinalResult())
+                data = wf.readframes(4000)
+                if len(data) == 0:
+                    break
+                if rec.AcceptWaveform(data):
+                    print(rec.Result())
+                else:
+                     print(rec.PartialResult())
+               print(rec.FinalResult())
 
         time.sleep(0.02)
 
