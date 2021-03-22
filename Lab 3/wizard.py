@@ -122,8 +122,7 @@ def run_example():
         return
     print("\nButton ready!")
     
-    if stage == 0:
-        
+    if stage == 0: 
         while True:   
             if my_button.is_button_pressed() == True:
                 new_jersey()
@@ -131,6 +130,7 @@ def run_example():
                     print("dummy, you lose.")
                 if new_jersey() == True:
                     stage += 1
+                    break
 
             if my_button.is_button_pressed() == False: 
                 y = top
@@ -143,6 +143,10 @@ def run_example():
                 y += font.getsize("A")[1]
                 disp.image(image, rotation)
                 speak(f'Press button to begin.')
+    if stage == 1
+        while True:
+            print("entered stage 2")
+            time.sleep(2)
 
 if __name__ == '__main__':
     try:
