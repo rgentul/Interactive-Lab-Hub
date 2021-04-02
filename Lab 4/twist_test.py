@@ -169,8 +169,7 @@ def setAmount():
 			))
 		
 		y += font.getsize("A")[1]
-		draw.text((x,y),str(amount), font=font, fill="#FFFFFF")
-		draw.text((x,y), " milliliters", font=font, fill="#FFFFFF")
+		draw.text((x,y),str(amount) + " milliliters", font=font, fill="#FFFFFF")
 		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
 		disp.image(image, rotation)
