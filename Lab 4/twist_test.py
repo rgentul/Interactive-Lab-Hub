@@ -153,6 +153,7 @@ def setAmount():
 	
 	print("In setup but not while loop")
 	myTwist.count = 0
+	time.sleep(.5)
 	
 	while True:
 		
