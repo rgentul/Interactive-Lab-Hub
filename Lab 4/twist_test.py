@@ -143,6 +143,7 @@ def runExample():
 		
 		if myTwist.pressed:
 			setAmount()
+			print("back home!")
 
 		# Display image.
 		disp.image(image, rotation)
@@ -171,7 +172,11 @@ def setAmount():
 		y += font.getsize("y")[1]
 		draw.text((x,y),str(myTwist.count*10) + " milliliters", font=font, fill="#FF0000")
 		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
-		draw.text((x,y), "\nPress stick to confirm.", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "Press stick to confirm.", font=font, fill="#FFFFFF")
+		
+		if myTwist.pressed:
+			return
 		
 		disp.image(image, rotation)
 		
