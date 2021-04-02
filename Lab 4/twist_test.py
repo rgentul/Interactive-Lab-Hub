@@ -142,8 +142,8 @@ def runExample():
 		y += font.getsize("A")[1]
 		
 		if myTwist.pressed:
-			setAmount()
-			print("back home!")
+			coffeAmount = setAmount()
+			print("back home! coffee amount: " + coffeeAmount)
 
 		# Display image.
 		disp.image(image, rotation)
@@ -154,7 +154,8 @@ def setAmount():
 	
 	print("In setup but not while loop")
 	myTwist.count = 0
-	time.sleep(.5)
+	amount = 0
+	time.sleep(1)
 	
 	while True:
 		
@@ -171,12 +172,14 @@ def setAmount():
 		
 		y += font.getsize("y")[1]
 		draw.text((x,y),str(myTwist.count*10) + " milliliters", font=font, fill="#FF0000")
-		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "250ml in a standard cup.", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
 		draw.text((x,y), "Press stick to confirm.", font=font, fill="#FFFFFF")
 		
 		if myTwist.pressed:
-			return
+			amount = myTwist.count*10
+			return amount
 		
 		disp.image(image, rotation)
 		
