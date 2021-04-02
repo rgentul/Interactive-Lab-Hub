@@ -110,10 +110,11 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+myTwist = qwiic_twist.QwiicTwist()
+
 def runExample():
 
 	print("\nStarting program\n")
-	myTwist = qwiic_twist.QwiicTwist()
 
 	if myTwist.connected == False:
 		print("The Qwiic twist device isn't connected to the system. Please check your connection", \
