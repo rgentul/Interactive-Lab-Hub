@@ -168,7 +168,7 @@ def setAmount():
 			))
 		
 		y += font.getsize("y")[1]
-		draw.text((x,y),str(myTwist.count*10) + " milliliters", font=font, fill="#FFFFFF")
+		draw.text((x,y),str(myTwist.count*10) + " milliliters", font=font, fill="#FF0000")
 		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
 		disp.image(image, rotation)
