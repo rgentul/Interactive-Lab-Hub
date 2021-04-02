@@ -111,8 +111,6 @@ backlight.switch_to_output()
 backlight.value = True
 
 myTwist = qwiic_twist.QwiicTwist()
-coffeeAmount = 0
-beans = 0
 
 def runExample():
 
@@ -213,13 +211,13 @@ def calculate(coffeeAmount):
 		draw.text((x,y), "Press stick when done.", font=font, fill="#FFFFFF")
 		
 		if myTwist.pressed:
-			ready()
+			ready(beans, coffeeAmount)
 		
 		disp.image(image, rotation)
 		
 		time.sleep(.1)
 		
-def ready():
+def ready(beans, coffeeAmount):
 	
 	while True:
 	
@@ -227,9 +225,11 @@ def ready():
 		y = top
 		draw.text((x,y), "You're ready to brew!", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
-		draw.text((x,y), "Confirm: " + str(coffeeAmount) + "ml boiling water", font=font, fill="#FFFFFF")
+		draw.text((x,y), "You should have:", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
-		draw.text((x,y), "Confirm: " + str(beans) + " grams of beans", font=font, fill="#FFFFFF")
+		draw.text((x,y), str(coffeeAmount) + "ml boiling water", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), str(beans) + " grams of beans", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
 		draw.text((x,y), "If ready, grind beans.", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
