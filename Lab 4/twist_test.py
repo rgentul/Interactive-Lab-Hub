@@ -226,13 +226,13 @@ def ready():
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 		y = top
 		draw.text((x,y), "You're ready to brew!", font=font, fill="#FFFFFF")
-		y = top
+		y += font.getsize("y")[1]
 		draw.text((x,y), "Confirm: " + str(coffeeAmount) + "ml boiling water", font=font, fill="#FFFFFF")
-		y = top
+		y += font.getsize("y")[1]
 		draw.text((x,y), "Confirm: " + str(beans) + " grams of beans", font=font, fill="#FFFFFF")
-		y = top
+		y += font.getsize("y")[1]
 		draw.text((x,y), "If ready, grind beans.", font=font, fill="#FFFFFF")
-		y = top
+		y += font.getsize("y")[1]
 		draw.text((x,y), "Press green button to start brew.", font=font, fill="#009933")
 		
 		disp.image(image, rotation)
