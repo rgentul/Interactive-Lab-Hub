@@ -142,7 +142,7 @@ def runExample():
 		y += font.getsize("A")[1]
 		
 		if myTwist.pressed:
-			coffeAmount = setAmount()
+			coffeeAmount = setAmount()
 			print("back home! coffee amount: " + coffeeAmount)
 
 		# Display image.
