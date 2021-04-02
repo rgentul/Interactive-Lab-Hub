@@ -213,7 +213,7 @@ def calculate(coffeeAmount):
 		draw.text((x,y), "Press stick when done.", font=font, fill="#FFFFFF")
 		
 		if myTwist.pressed:
-			return beans
+			ready()
 		
 		disp.image(image, rotation)
 		
