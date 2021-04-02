@@ -143,7 +143,7 @@ def runExample():
 		# Display image.
 		disp.image(image, rotation)
 
-		time.sleep(.3)
+		time.sleep(.1)
 
 if __name__ == '__main__':
 	try:
