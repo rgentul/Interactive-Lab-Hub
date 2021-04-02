@@ -160,6 +160,9 @@ def setup():
 		draw.text((x,y), "Turn stick to set", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
 		draw.text((x,y), "desired amount of coffee.", font=font, fill="#FFFFFF")
+		
+		disp.image(image, rotation)
+		
 		print("you did it! insert math here")
 		time.sleep(.1)
 	
