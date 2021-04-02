@@ -125,9 +125,9 @@ def runExample():
 
 	while True:
 
-		print("Count: %d, Pressed: %s" % (myTwist.count, \
-			"YES" if myTwist.pressed else "NO", \
-			))
+		#print("Count: %d, Pressed: %s" % (myTwist.count, \
+		#	"YES" if myTwist.pressed else "NO", \
+		#	))
 
 		#myTwist.set_color( random.randint(0,256), random.randint(0,256),random.randint(0,256))
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -170,9 +170,9 @@ def setAmount():
 		draw.text((x,y), "you like? Turn dial to set.", font=font, fill="#FFFFFF")
 		
 		
-		print("%d ml, Pressed: %s" % (myTwist.count, \
-			"YES" if myTwist.pressed else "NO", \
-			))
+		#print("%d ml, Pressed: %s" % (myTwist.count, \
+		#	"YES" if myTwist.pressed else "NO", \
+		#	))
 		
 		y += font.getsize("y")[1]
 		draw.text((x,y),str(myTwist.count*10) + " milliliters", font=font, fill="#FF0000")
@@ -194,7 +194,7 @@ def calculate(coffeeAmount):
 	beans = coffeeAmount * 0.06
 
 	while True:
-		print("in calculate!")
+		#print("in calculate!")
 		
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 		y = top
@@ -215,7 +215,7 @@ def calculate(coffeeAmount):
 		
 		disp.image(image, rotation)
 		
-		time.sleep(.5)
+		#time.sleep(.1)
 	
 if __name__ == '__main__':
 	try:
