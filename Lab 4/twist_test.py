@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-----------------------------------------------------------------------------
-# qwiic_twist_ex3.py
+# qwiic_twist_ex2.py
 #
 # Simple Example for the Qwiic Twist Device
 #------------------------------------------------------------------------
@@ -36,17 +36,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 # SOFTWARE.
 #==================================================================================
-# Example 1
+# Example 2
 #
 
 from __future__ import print_function
 import qwiic_twist
 import time
-import sys
+import random
 
 def runExample():
 
-	print("\nSparkFun qwiic Twist   Example 3\n")
+	print("\nSparkFun qwiic Twist   Example 2 - crazy colors\n")
 	myTwist = qwiic_twist.QwiicTwist()
 
 	if myTwist.connected == False:
@@ -56,16 +56,13 @@ def runExample():
 
 	myTwist.begin()
 
-	myTwist.set_color(255/2, 0, 255/2) #Set Red and Blue LED brightnesses to half of max.
-
-	myTwist.connect_red = -10  # Red LED will go down 10 in brightness with each encoder tick
-	myTwist.connect_blue = 10 #Blue LED will go up 10 in brightness with each encoder tick
-
 	while True:
 
 		print("Count: %d, Pressed: %s" % (myTwist.count, \
 			"YES" if myTwist.pressed else "NO", \
 			))
+
+		myTwist.set_color( random.randint(0,256), random.randint(0,256),random.randint(0,256))
 
 		time.sleep(.3)
 
@@ -73,5 +70,5 @@ if __name__ == '__main__':
 	try:
 		runExample()
 	except (KeyboardInterrupt, SystemExit) as exErr:
-		print("\nEnding Example 3")
+		print("\nEnding Example 2 - Crazy Colors")
 		sys.exit(0)
