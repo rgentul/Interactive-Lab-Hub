@@ -152,7 +152,6 @@ def runExample():
 def setAmount():
 	
 	print("In setup but not while loop")
-	amount = 0
 	myTwist.count = 0
 	
 	while True:
@@ -164,12 +163,11 @@ def setAmount():
 		draw.text((x,y), "you like? Turn dial to set.", font=font, fill="#FFFFFF")
 		
 		
-		print("%d ml, Pressed: %s" % (myTwist.count + amount, \
+		print("%d ml, Pressed: %s" % (myTwist.count, \
 			"YES" if myTwist.pressed else "NO", \
 			))
 		
-		y += font.getsize("A")[1]
-		draw.text((x,y),str(amount) + " milliliters", font=font, fill="#FFFFFF")
+		draw.text((x,y),"\n" + str(count) + " milliliters", font=font, fill="#FFFFFF")
 		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
 		disp.image(image, rotation)
