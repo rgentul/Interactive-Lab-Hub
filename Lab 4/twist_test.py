@@ -133,7 +133,12 @@ def runExample():
 
     		#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
 		y = top
-		draw.text((x,y), "Turn dial to set", font=font, fill="#FFFFFF")
+		draw.text((x,y), "Twist to set desired", font=font, fill="#FFFFFF")
+		y += font.getsize("A")[1]
+		draw.text((x,y), "amount of coffee.", font=font, fill="#FFFFFF")
+		y += font.getsize("A")[1]
+		draw.text((x,y), "\nPress stick when done.", font=font, fill="#FFFFFF")
+		y += font.getsize("A")[1]
 
 		# Display image.
 		disp.image(image, rotation)
