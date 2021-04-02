@@ -142,14 +142,14 @@ def runExample():
 		y += font.getsize("A")[1]
 		
 		if myTwist.pressed:
-			setup()
+			setAmount()
 
 		# Display image.
 		disp.image(image, rotation)
 
 		time.sleep(.1)
 		
-def setup():
+def setAmount():
 	
 	print("In setup but not while loop")
 	amount = 0
@@ -159,13 +159,20 @@ def setup():
 		
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 		y = top
-		draw.text((x,y), "Turn stick to set", font=font, fill="#FFFFFF")
+		draw.text((x,y), "How much coffee would you", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
-		draw.text((x,y), "desired amount of coffee.", font=font, fill="#FFFFFF")
+		draw.text((x,y), "like? Turn dial to set.", font=font, fill="#FFFFFF")
+		
 		
 		print("%d ml, Pressed: %s" % (myTwist.count + amount, \
 			"YES" if myTwist.pressed else "NO", \
 			))
+
+		draw.text((x,y), "/n", font=font, fill="#FFFFFF")
+		y += font.getsize("A")[1]
+		draw.text((x,y), amount, font=font, fill="#FFFFFF")
+		draw.text((x,y), " milliliters", font=font, fill="#FFFFFF")
+		draw.text((x,y), "/n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
 		disp.image(image, rotation)
 		
