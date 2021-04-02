@@ -111,6 +111,8 @@ backlight.switch_to_output()
 backlight.value = True
 
 myTwist = qwiic_twist.QwiicTwist()
+coffeeAmount = 0
+beans = 0
 
 def runExample():
 
@@ -215,7 +217,27 @@ def calculate(coffeeAmount):
 		
 		disp.image(image, rotation)
 		
-		#time.sleep(.1)
+		time.sleep(.1)
+		
+def ready():
+	
+	while True:
+	
+		draw.rectangle((0, 0, width, height), outline=0, fill=0)
+		y = top
+		draw.text((x,y), "You're ready to brew!", font=font, fill="#FFFFFF")
+		y = top
+		draw.text((x,y), "Confirm: " + str(coffeeAmount) + "ml boiling water", font=font, fill="#FFFFFF")
+		y = top
+		draw.text((x,y), "Confirm: " + str(beans) + " grams of beans", font=font, fill="#FFFFFF")
+		y = top
+		draw.text((x,y), "If ready, grind beans.", font=font, fill="#FFFFFF")
+		y = top
+		draw.text((x,y), "Press green button to start brew.", font=font, fill="#009933")
+		
+		disp.image(image, rotation)
+		
+		time.sleep(.1)
 	
 if __name__ == '__main__':
 	try:
