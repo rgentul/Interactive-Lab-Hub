@@ -167,7 +167,7 @@ def setAmount():
 			"YES" if myTwist.pressed else "NO", \
 			))
 		
-		draw.text((x,y),"\n" + str(count) + " milliliters", font=font, fill="#FFFFFF")
+		draw.text((x,y),"\n" + str(myTwist.count) + " milliliters", font=font, fill="#FFFFFF")
 		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
 		disp.image(image, rotation)
