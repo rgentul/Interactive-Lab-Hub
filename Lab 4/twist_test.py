@@ -153,10 +153,15 @@ def setup():
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	y = top
 	
-	While !myTwist.pressed:
-		draw.text((x,y), "In setup", font=font, fill="#FFFFFF")
-		print("in setup")
-		time.sleep(.1)
+	While True:
+		
+		if myTwist.pressed:
+			break
+		
+		else:
+			draw.text((x,y), "In setup", font=font, fill="#FFFFFF")
+			print("in setup")
+			time.sleep(.1)
 	
 if __name__ == '__main__':
 	try:
