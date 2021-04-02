@@ -170,7 +170,7 @@ def setAmount():
 
 		draw.text((x,y), "/n", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
-		draw.text((x,y), amount, font=font, fill="#FFFFFF")
+		draw.text((x,y), amount)
 		draw.text((x,y), " milliliters", font=font, fill="#FFFFFF")
 		draw.text((x,y), "/n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
