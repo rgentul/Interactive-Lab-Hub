@@ -146,6 +146,8 @@ def runExample():
 			print("back home! coffee amount: " + str(coffeeAmount))
 			time.sleep(1)
 			calculate(coffeeAmount)
+			print("beans measured!")
+			
 
 		# Display image.
 		disp.image(image, rotation)
@@ -204,7 +206,12 @@ def calculate(coffeeAmount):
 		y += font.getsize("y")[1]
 		draw.text((x,y), "of beans for ideal brew", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
-		draw.text((x,y), "Press stick to confirm.", font=font, fill="#FFFFFF")
+		draw.text((x,y), "Measure beans in hopper.", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "Press stick when done.", font=font, fill="#FFFFFF")
+		
+		if myTwist.pressed:
+			return beans
 		
 		disp.image(image, rotation)
 		
