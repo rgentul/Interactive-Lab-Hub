@@ -139,12 +139,22 @@ def runExample():
 		y += font.getsize("A")[1]
 		draw.text((x,y), "\nPress stick when done.", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
+		
+		setup()
 
 		# Display image.
 		disp.image(image, rotation)
 
 		time.sleep(.1)
-
+		
+def setup():
+	
+	draw.rectangle((0, 0, width, height), outline=0, fill=0)
+	y = top
+	draw.text((x,y), "In setup", font=font, fill="#FFFFFF")
+	print("in setup")
+	time.sleep(2)
+	
 if __name__ == '__main__':
 	try:
 		runExample()
