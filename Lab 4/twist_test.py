@@ -159,7 +159,7 @@ def setAmount():
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 		y = top
 		draw.text((x,y), "How much coffee would", font=font, fill="#FFFFFF")
-		y += font.getsize("A")[1]
+		y += font.getsize("y")[1]
 		draw.text((x,y), "you like? Turn dial to set.", font=font, fill="#FFFFFF")
 		
 		
@@ -167,7 +167,8 @@ def setAmount():
 			"YES" if myTwist.pressed else "NO", \
 			))
 		
-		draw.text((x,y),"\n" + str(myTwist.count) + " milliliters", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y),str(myTwist.count) + " milliliters", font=font, fill="#FFFFFF")
 		draw.text((x,y), "\n250ml in a standard cup.", font=font, fill="#FFFFFF")
 		
 		disp.image(image, rotation)
