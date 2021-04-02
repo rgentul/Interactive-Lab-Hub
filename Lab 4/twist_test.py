@@ -152,6 +152,7 @@ def runExample():
 def setup():
 	
 	print("In setup but not while loop")
+	amount = 0
 	
 	while True:
 		
@@ -160,6 +161,12 @@ def setup():
 		draw.text((x,y), "Turn stick to set", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
 		draw.text((x,y), "desired amount of coffee.", font=font, fill="#FFFFFF")
+		
+		myTwist.count = 0
+		
+		print("%d ml, Pressed: %s" % (myTwist.count + amount, \
+			"YES" if myTwist.pressed else "NO", \
+			))
 		
 		disp.image(image, rotation)
 		
