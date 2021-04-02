@@ -151,12 +151,12 @@ def runExample():
 		
 def setup():
 	
-	draw.rectangle((0, 0, width, height), outline=0, fill=0)
-	y = top
 	print("In setup but not while loop")
 	
 	while True:
-	
+		
+		draw.rectangle((0, 0, width, height), outline=0, fill=0)
+		y = top
 		draw.text((x,y), "Turn stick to set", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
 		draw.text((x,y), "desired amount of coffee.", font=font, fill="#FFFFFF")
