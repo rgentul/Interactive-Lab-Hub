@@ -132,7 +132,7 @@ def runExample():
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     		#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
-	   	y = top
+		y = top
 	    	draw.text((x,y), "Turn dial to set", font=font, fill="#FFFFFF")
 
 	    	# Display image.
