@@ -129,7 +129,7 @@ def runExample():
 			))
 
 		#myTwist.set_color( random.randint(0,256), random.randint(0,256),random.randint(0,256))
-		 draw.rectangle((0, 0, width, height), outline=0, fill=0)
+		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     		#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
 	   	y = top
