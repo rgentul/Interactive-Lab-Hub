@@ -143,7 +143,9 @@ def runExample():
 		
 		if myTwist.pressed:
 			coffeeAmount = setAmount()
-			print("back home! coffee amount: " + coffeeAmount)
+			print("back home! coffee amount: " + str(coffeeAmount))
+			time.sleep(1)
+			calculate(coffeeAmount)
 
 		# Display image.
 		disp.image(image, rotation)
@@ -184,6 +186,11 @@ def setAmount():
 		disp.image(image, rotation)
 		
 		time.sleep(.1)
+		
+def calculate(coffeeAmount)
+
+	while True:
+		print("in calculate!")
 	
 if __name__ == '__main__':
 	try:
