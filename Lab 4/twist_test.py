@@ -188,9 +188,22 @@ def setAmount():
 		time.sleep(.1)
 		
 def calculate(coffeeAmount):
+	
+	beans = coffeeAmount * 0.06
 
 	while True:
 		print("in calculate!")
+		
+		y = top
+		draw.text((x,y), "You're brewing with", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), str(coffeeAmount) + " millilters", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "Measure " + str(beans) + " grams", font=font, fill="#FF0000")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "of beans for ideal brew", font=font, fill="#FFFFFF")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "Press stick to confirm.", font=font, fill="#FFFFFF")
 		time.sleep(.5)
 	
 if __name__ == '__main__':
