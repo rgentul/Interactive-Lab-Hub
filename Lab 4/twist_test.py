@@ -153,7 +153,7 @@ def setup():
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	y = top
 	
-	while !myTwist.pressed:
+	while myTwist.pressed != True:
 	
 		draw.text((x,y), "In setup", font=font, fill="#FFFFFF")
 		print("in setup")
