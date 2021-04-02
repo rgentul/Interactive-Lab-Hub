@@ -133,10 +133,10 @@ def runExample():
 
     		#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
 		y = top
-	    	draw.text((x,y), "Turn dial to set", font=font, fill="#FFFFFF")
+		draw.text((x,y), "Turn dial to set", font=font, fill="#FFFFFF")
 
-	    	# Display image.
-	    	disp.image(image, rotation)
+		# Display image.
+		disp.image(image, rotation)
 
 		time.sleep(.3)
 
