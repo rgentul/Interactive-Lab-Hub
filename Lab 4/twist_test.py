@@ -187,7 +187,7 @@ def setAmount():
 		
 		time.sleep(.1)
 		
-def calculate(coffeeAmount)
+def calculate(coffeeAmount):
 
 	while True:
 		print("in calculate!")
