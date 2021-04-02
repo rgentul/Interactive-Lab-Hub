@@ -194,6 +194,7 @@ def calculate(coffeeAmount):
 	while True:
 		print("in calculate!")
 		
+		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 		y = top
 		draw.text((x,y), "You're brewing with", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
@@ -204,6 +205,9 @@ def calculate(coffeeAmount):
 		draw.text((x,y), "of beans for ideal brew", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
 		draw.text((x,y), "Press stick to confirm.", font=font, fill="#FFFFFF")
+		
+		disp.image(image, rotation)
+		
 		time.sleep(.5)
 	
 if __name__ == '__main__':
