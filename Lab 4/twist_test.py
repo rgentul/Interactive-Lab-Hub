@@ -161,6 +161,7 @@ def setup():
 		y += font.getsize("A")[1]
 		draw.text((x,y), "desired amount of coffee.", font=font, fill="#FFFFFF")
 		print("you did it! insert math here")
+		time.sleep(.1)
 	
 if __name__ == '__main__':
 	try:
