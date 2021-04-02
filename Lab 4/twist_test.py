@@ -155,11 +155,12 @@ def setup():
 	y = top
 	print("In setup but not while loop")
 	
-	while myTwist.pressed != True:
+	while True:
 	
-		draw.text((x,y), "In setup", font=font, fill="#FFFFFF")
-		print("in setup")
-		time.sleep(.1)
+		draw.text((x,y), "Turn stick to set", font=font, fill="#FFFFFF")
+		y += font.getsize("A")[1]
+		draw.text((x,y), "desired amount of coffee.", font=font, fill="#FFFFFF")
+		print("you did it! insert math here")
 	
 if __name__ == '__main__':
 	try:
