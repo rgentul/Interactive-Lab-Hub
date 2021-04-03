@@ -221,7 +221,7 @@ def calculate(coffeeAmount):
 def ready(beans, coffeeAmount):
 	
 	my_button = qwiic_button.QwiicButton()
-	my_button.LED_on(brightness)
+	my_button.LED_on(100)
 	
 	while True:
 	
