@@ -257,15 +257,20 @@ def timer(beans, coffeeAmount):
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	a = 0
 	while a < 210:
-		for minutes in range(0, 4):
+		for minutes in range(0, 3):
 			for seconds in range(0, 60):
 				time.sleep(1)
 				print(minutes,":", seconds)
 				draw.rectangle((0, 0, width, height), outline=0, fill=0)
 				y = top
-				draw.text((x,y), "Brew Time - " + str(minutes) + ":" + str(seconds), font=font, fill="#FFFFFF")
-				disp.image(image, rotation)
-				a = a + 1
+				if seconds < 10:
+					draw.text((x,y), "Brew Time - 0" + str(minutes) + ":0" + str(seconds), font=font, fill="#FFFFFF")
+					disp.image(image, rotation)
+					a = a + 1
+				else:
+					draw.text((x,y), "Brew Time - 0" + str(minutes) + ":" + str(seconds), font=font, fill="#FFFFFF")
+					disp.image(image, rotation)
+					a = a + 1
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	y = top
 	draw.text((x,y), "Brew finished!", font=font, fill="#FFFFFF")
