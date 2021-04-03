@@ -255,13 +255,13 @@ def ready(beans, coffeeAmount):
 def timer(beans, coffeeAmount):
 	
 	a = 0
-        hours = 0
-        while a < 1:
-            for minutes in range(0, 60):
-                for seconds in range(0, 60):
-                    time.sleep(1)
-                    print(hours,":", minutes,":", seconds)
-        hours = hours + 1
+	hours = 0
+	while a < 1:
+		for minutes in range(0, 60):
+			for seconds in range(0, 60):
+				time.sleep(1)
+				print(hours,":", minutes,":", seconds)
+	hours = hours + 1
 	
 if __name__ == '__main__':
 	try:
