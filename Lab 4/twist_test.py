@@ -116,8 +116,6 @@ myTwist = qwiic_twist.QwiicTwist()
 
 def brewMaster():
 
-	print("\nStarting program\n")
-
 	if myTwist.connected == False:
 		print("The Qwiic twist device isn't connected to the system. Please check your connection", \
 			file=sys.stderr)
@@ -127,14 +125,7 @@ def brewMaster():
 
 	while True:
 
-		#print("Count: %d, Pressed: %s" % (myTwist.count, \
-		#	"YES" if myTwist.pressed else "NO", \
-		#	))
-
-		#myTwist.set_color( random.randint(0,256), random.randint(0,256),random.randint(0,256))
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
-
-    		#TODO: fill in here. You should be able to look in cli_clock.py and stats.py
 		y = top
 		draw.text((x,y), "Welcome to the", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
@@ -145,20 +136,16 @@ def brewMaster():
 		
 		if myTwist.pressed:
 			coffeeAmount = setAmount()
-			print("back home! coffee amount: " + str(coffeeAmount))
 			time.sleep(1)
 			calculate(coffeeAmount)
-			print("beans measured!")
-			
+			break
 
-		# Display image.
 		disp.image(image, rotation)
 
 		time.sleep(.1)
 		
 def setAmount():
 	
-	print("In setup but not while loop")
 	myTwist.count = 0
 	amount = 0
 	time.sleep(1)
@@ -170,12 +157,6 @@ def setAmount():
 		draw.text((x,y), "How much coffee would", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
 		draw.text((x,y), "you like? Turn dial to set.", font=font, fill="#FFFFFF")
-		
-		
-		#print("%d ml, Pressed: %s" % (myTwist.count, \
-		#	"YES" if myTwist.pressed else "NO", \
-		#	))
-		
 		y += font.getsize("y")[1]
 		draw.text((x,y),str(myTwist.count*10) + " milliliters", font=font, fill="#FF0000")
 		y += font.getsize("y")[1]
@@ -214,6 +195,7 @@ def calculate(coffeeAmount):
 		
 		if myTwist.pressed:
 			ready(beans, coffeeAmount)
+			break
 		
 		disp.image(image, rotation)
 		
@@ -239,7 +221,6 @@ def ready(beans, coffeeAmount):
 		draw.text((x,y), "Press button to start brew.", font=font, fill="#009933")
 		
 		if my_button.is_button_pressed() == True:
-			print("button pressed!")
 			draw.rectangle((0, 0, width, height), outline=0, fill=0)
 			y = top
 			draw.text((x,y), "You brew should take no more than", font=font, fill="#FFFFFF")
@@ -271,12 +252,10 @@ def timer(beans, coffeeAmount):
 	
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	a = 0
-	timeFix = "0"
 	while a <= 210:
 		for minutes in range(0, 4):
 			for seconds in range(0, 60):
 				time.sleep(1)
-				print(minutes,":", seconds, ":", a)
 				draw.rectangle((0, 0, width, height), outline=0, fill=0)
 				y = top
 				if seconds < 10:
