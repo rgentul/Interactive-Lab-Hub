@@ -41,6 +41,7 @@
 
 from __future__ import print_function
 import qwiic_twist
+import qwiic_button
 import time
 import random
 
@@ -219,12 +220,13 @@ def calculate(coffeeAmount):
 		
 def ready(beans, coffeeAmount):
 	
+	my_button = qwiic_button.QwiicButton()
+	my_button.LEDon(uint8_t brightness = 255)
+	
 	while True:
 	
 		draw.rectangle((0, 0, width, height), outline=0, fill=0)
 		y = top
-		draw.text((x,y), "You're ready to brew!", font=font, fill="#FFFFFF")
-		y += font.getsize("y")[1]
 		draw.text((x,y), "You should have:", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
 		draw.text((x,y), str(coffeeAmount) + "ml boiling water", font=font, fill="#FFFFFF")
@@ -233,7 +235,10 @@ def ready(beans, coffeeAmount):
 		y += font.getsize("y")[1]
 		draw.text((x,y), "If ready, grind beans.", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
-		draw.text((x,y), "Press green button to start brew.", font=font, fill="#009933")
+		draw.text((x,y), "Press button to start brew.", font=font, fill="#009933")
+		
+		if my_button.is_button_pressed() == True:
+			print("button pressed!")
 		
 		disp.image(image, rotation)
 		
