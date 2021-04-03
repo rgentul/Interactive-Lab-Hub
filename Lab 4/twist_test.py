@@ -243,6 +243,7 @@ def ready(beans, coffeeAmount):
 			y = top
 			draw.text((x,y), "Beginning timer in 3, 2, 1...", font=font, fill="#FFFFFF")
 			time.sleep(3)
+			my_button.LED_off()
 			timer(beans, coffeeAmount)
 		
 		disp.image(image, rotation)
