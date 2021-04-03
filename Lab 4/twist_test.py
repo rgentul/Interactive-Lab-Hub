@@ -255,12 +255,17 @@ def ready(beans, coffeeAmount):
 			time.sleep(5)
 			my_button.LED_off()
 			timer(beans, coffeeAmount)
-		
-		
-		
+			break
+	
 		disp.image(image, rotation)
 		
 		time.sleep(.1)
+	
+	draw.rectangle((0, 0, width, height), outline=0, fill=0)
+	y = top
+	draw.text((x,y), "Brew finished! Enjoy!", font=font, fill="#FFFFFF")
+	disp.image(image, rotation)
+	time.sleep(5)
 
 def timer(beans, coffeeAmount):
 	
@@ -287,12 +292,14 @@ def timer(beans, coffeeAmount):
 					draw.text((x,y), "Add " + str(beans*2) + " grams of water", font=font, fill="#FFB255")
 					y += font.getsize("y")[1]
 					draw.text((x,y), "within 45 seconds.", font=font, fill="#FFFFFF")
+					y += font.getsize("y")[1]
+					draw.text((x,y), "Then, swirl vigourously.", font=font, fill="#FFFFFF")
 					disp.image(image, rotation)
 				if a > 45 and a <= 75:
 					y += font.getsize("y")[1]
 					draw.text((x,y), "Pouring phase 1!", font=font, fill="#FFFFFF")
 					y += font.getsize("y")[1]
-					draw.text((x,y), "Get to " + str(coffeeAmount * 0.6) + " grams of water", font=font, fill="#FFB255")
+					draw.text((x,y), "Get to " + str(coffeeAmount * 0.6) + " grams", font=font, fill="#FFB255")
 					y += font.getsize("y")[1]
 					draw.text((x,y), "by 1 minute 15 seconds.", font=font, fill="#FFFFFF")
 					disp.image(image, rotation)
@@ -300,11 +307,11 @@ def timer(beans, coffeeAmount):
 					y += font.getsize("y")[1]
 					draw.text((x,y), "Pouring phase 2!", font=font, fill="#FFFFFF")
 					y += font.getsize("y")[1]
-					draw.text((x,y), "Get to " + str(coffeeAmount) + " grams of water", font=font, fill="#FFB255")
+					draw.text((x,y), "Get to " + str(coffeeAmount) + " grams", font=font, fill="#FFB255")
 					y += font.getsize("y")[1]
 					draw.text((x,y), "by 1 minute 45 seconds.", font=font, fill="#FFFFFF")
 					y += font.getsize("y")[1]
-					draw.text((x,y), "You should be at your final brew weight.", font=font, fill="#FFFFFF")
+					draw.text((x,y), "This is your final brew weight.", font=font, fill="#FFFFFF")
 					disp.image(image, rotation)
 				if a > 105 and a <= 210:
 					y += font.getsize("y")[1]
@@ -318,11 +325,6 @@ def timer(beans, coffeeAmount):
 					disp.image(image, rotation)
 				if a > 210:
 					break
-	draw.rectangle((0, 0, width, height), outline=0, fill=0)
-	y = top
-	draw.text((x,y), "Brew finished!", font=font, fill="#FFFFFF")
-	disp.image(image, rotation)
-	time.sleep(5)
 	
 if __name__ == '__main__':
 	try:
