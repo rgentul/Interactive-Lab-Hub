@@ -44,6 +44,7 @@ import qwiic_twist
 import qwiic_button
 import time
 import random
+from stopwatch import Stopwatch
 
 from datetime import datetime, timedelta
 import subprocess
@@ -252,11 +253,10 @@ def ready(beans, coffeeAmount):
 		time.sleep(.1)
 
 def timer(beans, coffeeAmount):
-		
-	now = time.time()
-	future = now + 30
-	while time.time() < future:
-		print(future)
+	
+	stopwatch = Stopwatch()
+	stopwatch.start()
+	print(str(stopwatch))
 	
 if __name__ == '__main__':
 	try:
