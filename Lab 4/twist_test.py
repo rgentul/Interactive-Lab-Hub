@@ -260,7 +260,7 @@ def timer(beans, coffeeAmount):
 		for minutes in range(0, 4):
 			for seconds in range(0, 60):
 				time.sleep(1)
-				print(hours,":", minutes,":", seconds)
+				print(minutes,":", seconds)
 				y = top
 				draw.text((x,y), str(minutes),":", str(seconds), font=font, fill="#FFFFFF")
 				disp.image(image, rotation)
