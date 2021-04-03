@@ -254,17 +254,21 @@ def ready(beans, coffeeAmount):
 
 def timer(beans, coffeeAmount):
 	
-	a = 0
-	hours = 0
-	while a < 1:
-		for minutes in range(0, 60):
+	draw.rectangle((0, 0, width, height), outline=0, fill=0)
+	a = 210
+	while a < 210:
+		for minutes in range(0, 4):
 			for seconds in range(0, 60):
 				time.sleep(1)
 				print(hours,":", minutes,":", seconds)
 				y = top
-				draw.text((x,y), str(hours),":", str(minutes),":", str(seconds), font=font, fill="#FFFFFF")
+				draw.text((x,y), str(minutes),":", str(seconds), font=font, fill="#FFFFFF")
 				disp.image(image, rotation)
-	hours = hours + 1
+				a = a + 1
+	draw.rectangle((0, 0, width, height), outline=0, fill=0)
+	y = top
+	draw.text((x,y), "Brew finished!", font=font, fill="#FFFFFF")
+	disp.image(image, rotation)
 	
 if __name__ == '__main__':
 	try:
