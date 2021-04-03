@@ -45,7 +45,8 @@ import qwiic_button
 import time
 import random
 from stopwatch import Stopwatch
-from playsound import playsound
+import pygame
+
 
 from datetime import datetime, timedelta
 import subprocess
@@ -134,8 +135,12 @@ def brewMaster():
 		y += font.getsize("A")[1]
 		draw.text((x,y), "\nPress stick to continue.", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
-		playsound('~/Interactive-Lab-Hub/Lab 4/begin.wav')
-		
+		pygame.mixer.init()
+		pygame.mixer.music.load("begin.wav")
+		pygame.mixer.music.play()
+		while pygame.mixer.music.get_busy() == True:
+			continue
+			
 		if myTwist.pressed:
 			coffeeAmount = setAmount()
 			time.sleep(1)
