@@ -264,7 +264,8 @@ def timer(beans, coffeeAmount):
 				draw.rectangle((0, 0, width, height), outline=0, fill=0)
 				y = top
 				if seconds < 10:
-					draw.text((x,y), "Brew Time - 0" + str(minutes) + ":0" + str(seconds), font=font, fill="#FFFFFF")
+					seconds = str("0" + seconds)
+					draw.text((x,y), "Brew Time - 0" + str(minutes) + ":" + str(seconds), font=font, fill="#FFFFFF")
 					disp.image(image, rotation)
 					a = a + 1
 				if seconds >= 10:
