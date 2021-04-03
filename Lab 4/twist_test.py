@@ -261,8 +261,9 @@ def timer(beans, coffeeAmount):
 			for seconds in range(0, 60):
 				time.sleep(1)
 				print(minutes,":", seconds)
+				draw.rectangle((0, 0, width, height), outline=0, fill=0)
 				y = top
-				draw.text((x,y), str(minutes) + ":" + str(seconds), font=font, fill="#FFFFFF")
+				draw.text((x,y), "Brew Time - " + str(minutes) + ":" + str(seconds), font=font, fill="#FFFFFF")
 				disp.image(image, rotation)
 				a = a + 1
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
