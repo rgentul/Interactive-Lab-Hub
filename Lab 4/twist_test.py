@@ -307,7 +307,7 @@ def timer(beans, coffeeAmount):
 					y += font.getsize("y")[1]
 					draw.text((x,y), "Then don't touch it!", font=font, fill="#FFFFFF")
 					disp.image(image, rotation)
-				if a = 210:
+				if a == 210:
 					break
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	y = top
