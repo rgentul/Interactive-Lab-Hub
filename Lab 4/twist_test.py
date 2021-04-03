@@ -252,7 +252,8 @@ def ready(beans, coffeeAmount):
 		time.sleep(.1)
 
 def timer(beans, coffeeAmount):
-	
+		
+		seconds = 20
 		start = time.time()
 		time.clock()    
 		elapsed = 0
