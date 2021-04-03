@@ -45,6 +45,7 @@ import qwiic_button
 import time
 import random
 from stopwatch import Stopwatch
+from playsound import playsound
 
 from datetime import datetime, timedelta
 import subprocess
@@ -133,6 +134,7 @@ def brewMaster():
 		y += font.getsize("A")[1]
 		draw.text((x,y), "\nPress stick to continue.", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
+		playsound('audio.mp3')
 		
 		if myTwist.pressed:
 			coffeeAmount = setAmount()
@@ -216,16 +218,18 @@ def ready(beans, coffeeAmount):
 		y += font.getsize("y")[1]
 		draw.text((x,y), str(beans) + " grams of beans", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
-		draw.text((x,y), "If ready, grind beans.", font=font, fill="#FFFFFF")
+		draw.text((x,y), "Grind your beans now!", font=font, fill="#FFFFFF")
 		y += font.getsize("y")[1]
-		draw.text((x,y), "Press button to start brew.", font=font, fill="#009933")
+		draw.text((x,y), "When grinding is finished,", font=font, fill="#009933")
+		y += font.getsize("y")[1]
+		draw.text((x,y), "press button to start brew.", font=font, fill="#009933")
 		
 		if my_button.is_button_pressed() == True:
 			draw.rectangle((0, 0, width, height), outline=0, fill=0)
 			y = top
-			draw.text((x,y), "You brew should take no more than", font=font, fill="#FFFFFF")
+			draw.text((x,y), "You brew should take", font=font, fill="#FFFFFF")
 			y += font.getsize("y")[1]
-			draw.text((x,y), "3 minutes 30 seconds", font=font, fill="#FF0000")
+			draw.text((x,y), "3 minutes 30 seconds.", font=font, fill="#FF0000")
 			y += font.getsize("y")[1]
 			draw.text((x,y), "Adjust grind size if ", font=font, fill="#FFFFFF")
 			y += font.getsize("y")[1]
@@ -247,6 +251,8 @@ def ready(beans, coffeeAmount):
 	draw.text((x,y), "Brew finished! Enjoy!", font=font, fill="#FFFFFF")
 	disp.image(image, rotation)
 	time.sleep(5)
+	draw.rectangle((0, 0, width, height), outline=0, fill=0)
+	backlight.value = False
 
 def timer(beans, coffeeAmount):
 	
@@ -290,7 +296,7 @@ def timer(beans, coffeeAmount):
 					y += font.getsize("y")[1]
 					draw.text((x,y), "by 1 minute 45 seconds.", font=font, fill="#FFFFFF")
 					y += font.getsize("y")[1]
-					draw.text((x,y), "This is your final brew weight.", font=font, fill="#FFFFFF")
+					draw.text((x,y), "This is your final weight.", font=font, fill="#FFFFFF")
 					disp.image(image, rotation)
 				if a > 105 and a <= 210:
 					y += font.getsize("y")[1]
