@@ -255,7 +255,7 @@ def ready(beans, coffeeAmount):
 def timer(beans, coffeeAmount):
 	
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
-	a = 210
+	a = 0
 	while a < 210:
 		for minutes in range(0, 4):
 			for seconds in range(0, 60):
