@@ -256,7 +256,7 @@ def timer(beans, coffeeAmount):
 	
 	draw.rectangle((0, 0, width, height), outline=0, fill=0)
 	a = 0
-	while true:
+	while True:
 		for minutes in range(0, 4):
 			for seconds in range(0, 60):
 				time.sleep(1)
