@@ -134,7 +134,7 @@ def brewMaster():
 		y += font.getsize("A")[1]
 		draw.text((x,y), "\nPress stick to continue.", font=font, fill="#FFFFFF")
 		y += font.getsize("A")[1]
-		playsound('begin.wav')
+		playsound('~/Interactive-Lab-Hub/Lab 4/begin.wav')
 		
 		if myTwist.pressed:
 			coffeeAmount = setAmount()
