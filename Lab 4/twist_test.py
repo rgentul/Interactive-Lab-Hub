@@ -242,6 +242,7 @@ def ready(beans, coffeeAmount):
 			draw.rectangle((0, 0, width, height), outline=0, fill=0)
 			y = top
 			draw.text((x,y), "Beginning timer in 3, 2, 1...", font=font, fill="#FFFFFF")
+			disp.image(image, rotation)
 			time.sleep(3)
 			my_button.LED_off()
 			timer(beans, coffeeAmount)
