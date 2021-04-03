@@ -260,7 +260,7 @@ def timer(beans, coffeeAmount):
 		for minutes in range(0, 3):
 			for seconds in range(0, 60):
 				time.sleep(1)
-				print(minutes,":", seconds)
+				print(minutes,":", seconds, ":", a)
 				draw.rectangle((0, 0, width, height), outline=0, fill=0)
 				y = top
 				if seconds < 10:
