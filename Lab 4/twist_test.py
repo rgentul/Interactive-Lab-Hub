@@ -261,6 +261,8 @@ def timer(beans, coffeeAmount):
 			for seconds in range(0, 60):
 				time.sleep(1)
 				print(hours,":", minutes,":", seconds)
+				y = top
+				draw.text((x,y), str(hours),":", str(minutes),":", str(seconds), font=font, fill="#FFFFFF")
 	hours = hours + 1
 	
 if __name__ == '__main__':
