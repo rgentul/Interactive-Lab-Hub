@@ -221,7 +221,7 @@ def calculate(coffeeAmount):
 def ready(beans, coffeeAmount):
 	
 	my_button = qwiic_button.QwiicButton()
-	my_button.LED_on(100)
+	my_button.LED_on(80)
 	
 	while True:
 	
@@ -239,10 +239,21 @@ def ready(beans, coffeeAmount):
 		
 		if my_button.is_button_pressed() == True:
 			print("button pressed!")
+			draw.rectangle((0, 0, width, height), outline=0, fill=0)
+			y = top
+			draw.text((x,y), "Beginning timer in 3, 2, 1...", font=font, fill="#FFFFFF")
+			time.sleep(3)
+			timer(beans, coffeeAmount)
 		
 		disp.image(image, rotation)
 		
 		time.sleep(.1)
+
+def timer(beans, coffeeAmount):
+	
+	while True:
+		print("in timer!")
+		time.sleep(.5)
 	
 if __name__ == '__main__':
 	try:
