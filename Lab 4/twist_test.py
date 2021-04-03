@@ -113,7 +113,7 @@ backlight.value = True
 
 myTwist = qwiic_twist.QwiicTwist()
 
-def runExample():
+def brewMaster():
 
 	print("\nStarting program\n")
 
@@ -243,7 +243,7 @@ def ready(beans, coffeeAmount):
 			y = top
 			draw.text((x,y), "Beginning timer in 3, 2, 1...", font=font, fill="#FFFFFF")
 			disp.image(image, rotation)
-			time.sleep(3)
+			time.sleep(5)
 			my_button.LED_off()
 			timer(beans, coffeeAmount)
 		
@@ -253,13 +253,17 @@ def ready(beans, coffeeAmount):
 
 def timer(beans, coffeeAmount):
 	
-	while True:
-		print("in timer!")
-		time.sleep(.5)
+		start = time.time()
+		time.clock()    
+		elapsed = 0
+		while elapsed < seconds:
+			elapsed = time.time() - start
+			print "loop cycle time: %f, seconds count: %02d" % (time.clock() , elapsed) 
+			time.sleep(1) 
 	
 if __name__ == '__main__':
 	try:
-		runExample()
+		brewMaster()
 	except (KeyboardInterrupt, SystemExit) as exErr:
-		print("\nEnding Example 2 - Crazy Colors")
+		print("\nWomp womp, ending program")
 		sys.exit(0)
