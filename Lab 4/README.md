@@ -130,9 +130,17 @@ Make a paper display for your project that communicates the state of the Pi and 
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
+https://drive.google.com/file/d/1wAslJxA9DCIqk77UbdqgbXIdjLyxOi9b/view?usp=sharing
+
+https://drive.google.com/file/d/14ZeiHmj4IxVdyLnyizLN_KSHDxNDziwg/view?usp=sharing
+
 **b. Make a video of your paper display in action.**
 
+Not sure how to make a video of a piece of paper... 
+
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+This design integrates all the components of a pour over into one machine, but allows the user to have control over the water flow. It's more or less a ridiculous coffee maker.
 
 ### Part D
 ### Materiality
@@ -143,7 +151,13 @@ Design a system with the Pi and anything from your kit with a focus on form, and
 
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
 
+I tried to use as much cardboard as possible, but quickly learned that my cutting/crimping skills had maxed out in 5th grade. Duct tape was nice to have.
+
+I also had to drop the grinder component of the project, as I couldn't figure out how to suspend a grinding mechanism above a rotating mug. Maybe if my cardboard skills were better I could have figured that one out, but it's noted for next time.
+
 **b. explain the selection.**
+
+Ultimately, I settled on cardboard for the large part of the design. The user's mug and their pour over device (in my case, a V60) are also necessary. I used my record player to simulate a rotating motion that would ultimately be part of the machine itself.
 
 ### Part 2.
 
