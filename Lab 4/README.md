@@ -163,6 +163,8 @@ Ultimately, I settled on cardboard for the large part of the design. The user's 
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design.
 
+Final video: https://drive.google.com/file/d/1LE5L5jnpM8T99NPUW0_eEwLEbkJL2-q6/view?usp=sharing
+
 Reiterating:
 ### Deliverables for this lab are: 
 1. Sketches/photos of device designs
