@@ -83,18 +83,6 @@ pi@ixe00:~/openCV-examples $ tree -l
     ├── HowToUse.md
     └── ssd_mobilenet_v2_coco_2018_03_29.pbtxt
 ```
-#### Filtering, FFTs, and Time Series data. (beta, optional)
-Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU data stream could create a simple activity classifier between walking, running, and standing.
-
-Using the set up from the [Lab 3 demo](https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/Spring2021/Lab%203/demo) and the accelerometer, try the following:
-
-**1. Set up threshold detection** Can you identify when a signal goes above certain fixed values?
-
-**2. Set up averaging** Can you average your signal in N-sample blocks? N-sample running average?
-
-**3. Set up peak detection** Can you identify when your signal reaches a peak and then goes down?
-
-Include links to your code here, and put the code for these in your repo--they will come in handy later.
 
 #### Teachable Machines (beta, optional)
 Google's [TeachableMachines](https://teachablemachine.withgoogle.com/train) might look very simple.  However, its simplicity is very useful for experimenting with the capabilities of this technology.
@@ -119,7 +107,13 @@ As a note, the global Python install contains also a PyTorch installation. That 
 Pick one of the models you have tried, pick a class of objects, and experiment with prototyping an interaction.
 This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
+
 **Describe and detail the interaction, as well as your experimentation.**
+
+For this part, I was able to get TeachableMachines up and running. I wanted to have my system identify my dog when it walked past the camera, and importantly be able to distinguish it from when a person walked past.
+
+Here's some good success of the model working within the browser:
+![image](https://user-images.githubusercontent.com/66213163/115129162-7a9bf100-9fb1-11eb-854b-c5552e9e1e2e.png)
 
 ### Part C
 ### Test the interaction prototype
