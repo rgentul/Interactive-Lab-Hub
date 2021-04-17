@@ -110,7 +110,7 @@ Try out different interactions outputs and inputs.
 
 **Describe and detail the interaction, as well as your experimentation.**
 
-For this part, I was able to get TeachableMachines up and running. I wanted to have my system identify my dog when it walked past the camera, and importantly be able to distinguish it from when a person walked past.
+For this part, I was able to get TeachableMachines up and running. I wanted to have my system identify my dog when it walked past the camera, and importantly be able to distinguish it from when a person walked past. Ultimately, I'd like this to alert a user when their dog is near the front door, so the user knows that their dog wants to go outside (or possibly come inside).
 
 Here's some good success of the model working within the browser:
 ![image](https://user-images.githubusercontent.com/66213163/115129162-7a9bf100-9fb1-11eb-854b-c5552e9e1e2e.png)
@@ -119,17 +119,22 @@ Here's some good success of the model working within the browser:
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note your observations**:
+
+Next, I loaded my code into the Pi to see if I could get it to work. This took some significant finagling, but I got it up and running. 
+**Here's a video of that in action.**
+
+
 For example:
-1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+1. When does it what it is supposed to do? **Generally, it detects Otto pretty well! If the pi is positioned where my laptop's webcam was when I captured the images for the model, I'm almost always able to detect Otto when he walks by.**
+1. When does it fail? **Moving the pi to a new position has a big, big impact on detecting Otto. It also doesn't always reliably detect people when they walk by in any position, and sometimes confused us for Otto.**
+1. When it fails, why does it fail? **I'm guessing I haven't added enough images into the model, and that variations in the background are really throwing it off.**
+1. Based on the behavior you have seen, what other scenarios could cause problems? **Other than camera positioning and the lack of a really solid model, we could also see issues if someone is able to reposition the interactive device who doesn't know its function. I'd imagine a guest might fuss with it, and then the camera would no longer be pointing at the dog :/ **
 
 **Think about someone using the system. Describe how you think this will work.**
-1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
+1. Are they aware of the uncertainties in the system? **Definitely not. We don't want an alert going off on a false positive.**
+1. How bad would they be impacted by a miss classification? **They'd be quite annoyed, more so depending on how loud my alert is haha.**
+1. How could change your interactive system to address this? **I think we need to assume that a model is never going to be perfect, so we'll want to adjust the sensitivity of the alert (it should be really really certain that a dog is in view to alert the user). For positioning, we want this to be installed permanently, and certainly not placed in the middle of the floor.**
+1. Are there optimizations you can try to do on your sense-making algorithm. **Yes! More images, more angles, and some clearer "background" images.**
 
 ### Part D
 ### Characterize your own Observant system
