@@ -76,6 +76,7 @@ while(True):
     print("I think its a:",labels[np.argmax(prediction)])
     if labels[np.argmax(prediction)] == "otto":
         pygame.mixer.music.play()
+        time.sleep(1)
 
     if webCam:
         if sys.argv[-1] == "noWindow":
