@@ -73,6 +73,8 @@ while(True):
     # run the inference
     prediction = model.predict(data)
     print("I think its a:",labels[np.argmax(prediction)])
+    if labels[np.argmax(prediction)] == "otto":
+        pygame.mixer.music.load('woof.mp3')
 
     if webCam:
         if sys.argv[-1] == "noWindow":
