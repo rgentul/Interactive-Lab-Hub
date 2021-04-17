@@ -6,6 +6,14 @@ from PIL import Image, ImageOps
 import numpy as np
 import cv2
 import sys
+import pygame
+
+
+pygame.mixer.init()
+pygame.mixer.music.load("ding.wav")
+pygame.mixer.music.play()
+while pygame.mixer.music.get_busy() == True:
+    continue
 
 
 # Disable scientific notation for clarity
