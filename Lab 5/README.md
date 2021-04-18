@@ -123,6 +123,8 @@ Now flight test your interactive prototype and **note your observations**:
 Next, I loaded my code into the Pi to see if I could get it to work. This took some significant finagling, but I got it up and running. 
 **Here's a video of that in action.**
 
+https://drive.google.com/file/d/1gtZiVesKT7ZMgtcN0fXHZ5REsPaIV_FC/view?usp=sharing
+
 
 For example:
 1. When does it what it is supposed to do? **Generally, it detects Otto pretty well! If the pi is positioned where my laptop's webcam was when I captured the images for the model, I'm almost always able to detect Otto when he walks by.**
