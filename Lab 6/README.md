@@ -84,6 +84,10 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **1. Explain your design** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+We chose to design a distributed system for baking a cake (because you can't go wrong with cake). Each of our group members was in charge of a different piece of the cake-making system - cracking eggs, mixing ingredients, and baking the cake.
+
+Why would anyone want this? Why does anyone want anything?? Life is about making things more complicated than they need to be in the pursuit of deeper meaning.
+
 **2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
 **3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
