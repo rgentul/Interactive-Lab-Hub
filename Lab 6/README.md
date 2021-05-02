@@ -92,6 +92,8 @@ Why would anyone want this? Why does anyone want anything?? Life is about making
 
 **3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
 
+We used tools that simulate what you would be doing when baking. The egg is cracked using a button, the batter is mixed using the joystick, and the oven is turned on using the twist stick, to simulate an oven dial. Therefore I think most people would know how to interact with it. The directions tell you whose step is up.
+
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
 **5. BONUS (Wendy didn't approve this so you should probably ignore it)** get the whole class to run your code and make your distributed system BIGGER.
