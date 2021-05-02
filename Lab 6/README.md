@@ -98,4 +98,6 @@ We used tools that simulate what you would be doing when baking. The egg is crac
 
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
+https://iddlab6-mbas.glitch.me
+
 **5. BONUS (Wendy didn't approve this so you should probably ignore it)** get the whole class to run your code and make your distributed system BIGGER.
