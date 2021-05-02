@@ -27,9 +27,14 @@ while True:
     if amount < 350:
         val = f"Oven not set. Set oven to 350 to continue."
         print(val, amount)
-        client.publish(topic, val)
     if amount >= 350:
         val = f"Oven set!"
         print(val, amount)
         client.publish(topic, val)
+        break
     time.sleep(0.25)
+
+while True:
+    if myTwist.pressed:
+        val = f"Cake ready!"
+        client.publish(topic, val)
