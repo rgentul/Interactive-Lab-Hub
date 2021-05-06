@@ -84,7 +84,7 @@ topic = 'IDD/remote'
 i2c = busio.I2C(board.SCL, board.SDA)
 
 while True:
-    if buttonA.value < 350:
+    if buttonA.value:
         print("button pressed!")
         val = f"Button pressed!"
         client.publish(topic, val)
