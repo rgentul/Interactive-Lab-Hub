@@ -15,7 +15,8 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-buttonA = digitalio.DigitalInOut(board.D26)
+# configures the button. change D value to whatever is appropriate
+buttonA = digitalio.DigitalInOut(board.D23)
 buttonA.switch_to_input()
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
